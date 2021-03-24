@@ -1,0 +1,41 @@
+header{
+    width: 100%;
+    height: 40px;
+    background-color: var(--color-header);
+    backdrop-filter: blur(2px);
+    font-size: .9rem;
+    color: var(--color-text-header);
+}
+nav{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav a{
+    color: var(--color-text-header);
+}
+nav ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .mobile{
+    display: none;
+}
+nav ul a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+    transition: 120ms;
+}
+nav ul a:first-child{
+    font-size: 1rem;
+}
+nav ul a:hover{
+    color: var(--color-text-hover);
+}

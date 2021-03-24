@@ -1,0 +1,43 @@
+@media(max-width: 1100px){
+    nav ul a{
+        font-size: .8rem;
+    }
+}
+@media(max-width: 950px){
+    nav .mobile{
+        width: 100%;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    nav .mobile .burguer{
+        cursor: pointer;
+    }
+    nav ul{
+        display: none;
+        height: calc(100vh - 40px);
+        /* display: flex; */
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 10;
+        background-color: black;
+    }
+    nav ul a:first-child{
+        display: none;
+    }
+    nav ul a{
+        font-size: .8rem;
+    }
+    .apresentation h1{
+        font-size: 3rem;
+    }
+}
+@media(max-width:640px){
+    #home{
+        background: none;
+        backdrop-filter: blur(3px) brightness(100%);
+    }
+}
