@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="/public/styles/main/main.css">
         <link rel="stylesheet" href="/public/styles/subjects/subjects_main.css">
         <link rel="stylesheet" href="/public/styles/footer/footer.css">
+        <link rel="stylesheet" href="/public/styles/responsive.css">
 
     <!-- END CSS -->
 
@@ -27,14 +28,18 @@
     <div id="wrapper">
         <header>
             <nav>
-                <ul>
+                <div class="mobile">
+                    <a href="/"><i class='bx bxs-home' ></i></a>
+                    <i class='burguer bx bx-menu-alt-right' ></i>
+                </div>
+                <ul class="menu">
                     <a href="/"><i class='bx bxs-home' ></i></a>
                     <a href="/calculo"><li>Cálculo I</li></a>
                     <a href="/fisica"><li>Física I</li></a>
                     <a href="/calculo-vetorial"><li>Cálculo Vetorial</li></a>
                     <a href="/intro-programacao"><li>Introdução a Programação</li></a>
                     <a href="/intro-computador"><li>Introdução ao Computador</li></a>
-                </ul><!-- UL -->
+                </ul><!-- UL -->   
             </nav><!-- NAV -->
         </header> <!-- HEADER -->
 
@@ -75,5 +80,6 @@
         </footer>
     </div><!-- WRAPPER -->
     <script src="/public/scripts/effect/effect.js"></script>
+    <script src="/public/scripts/menu-mobile/menu.js"></script>
 </body>
 </html>

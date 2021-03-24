@@ -12,23 +12,29 @@
         justify-content: space-between;
     }
     nav .mobile .burguer{
+        padding: 5px;
         cursor: pointer;
     }
+    nav .mobile .burguer:active{
+        transform: scale(.8,.8);
+    }
     nav ul{
-        display: none;
+        /* display: none; */
         height: calc(100vh - 40px);
-        /* display: flex; */
+        display: flex;
         flex-direction: column;
         position: fixed;
-        right: 0;
-        top: 0;
+        right: -204px;
+        top: 40px;
         z-index: 10;
-        background-color: black;
+        background-color: var(--color-header);
+        transition: 300ms ease-in-out;
     }
     nav ul a:first-child{
         display: none;
     }
     nav ul a{
+        height: 50px;
         font-size: .8rem;
     }
     .apresentation h1{
@@ -36,8 +42,10 @@
     }
 }
 @media(max-width:640px){
+    body{
+        background-image: url(/public/images/bg-mobile.jpg);
+    }
     #home{
         background: none;
-        backdrop-filter: blur(3px) brightness(100%);
     }
 }
