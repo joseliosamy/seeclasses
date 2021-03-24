@@ -29,7 +29,7 @@
         z-index: 10;
         background-color: var(--color-header);
         transition: 300ms ease-in-out;
-    }
+    }   
     nav ul a:first-child{
         display: none;
     }
@@ -47,5 +47,15 @@
     }
     #home{
         background: none;
+    }
+}
+@keyframes teste{
+    from{
+        opacity: 0;
+        right: -204px;
+    }
+    to{
+        opacity: 1;
+        right: 0;
     }
 }
