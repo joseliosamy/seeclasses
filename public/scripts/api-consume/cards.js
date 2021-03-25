@@ -16,21 +16,21 @@ if(window.location.pathname == "/calculo"){
 function show(items){
     let output = "";
 
-    for(let item of items){
+    for(let card of cards){
         output += `
         <div class="card">
         <div class="card_name">
-            <h2>${item.calculo.card.cardHeader.title}</h2>
+            <h2>${card.calculo.item.cardHeader.title}</h2>
         </div>
         <div class="card_body">
             <div class="thumbl">
-                <img src="${item.calculo.card.cardBody.cardImage}" alt="${item.calculo.card.cardBody.imageAlt}">
+                <img src="${card.calculo.item.cardBody.cardImage}" alt="${item.calculo.card.cardBody.imageAlt}">
             </div>
             <div class="date">
-                <p>${item.calculo.card.cardBody.date}</p>
+                <p>${card.calculo.item.cardBody.date}</p>
             </div>
             <div class="redirect">
-                <a href="${item.calculo.card.cardBody.videoHref}" target="_blank"><i class='bx bx-play'></i>Assistir</a>
+                <a href="${card.calculo.item.cardBody.videoHref}" target="_blank"><i class='bx bx-play'></i>Assistir</a>
             </div>
         </div>
     </div><!-- CARD -->
