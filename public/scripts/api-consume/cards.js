@@ -20,17 +20,17 @@ function show(items){
         output += `
         <div class="card">
         <div class="card_name">
-            <h2>${card.calculo.card.cardHeader.title}</h2>
+            <h2>${item.calculo.card.cardHeader.title}</h2>
         </div>
         <div class="card_body">
             <div class="thumbl">
-                <img src="${card.calculo.card.cardBody.cardImage}" alt="${card.calculo.card.cardBody.imageAlt}">
+                <img src="${item.calculo.card.cardBody.cardImage}" alt="${item.calculo.card.cardBody.imageAlt}">
             </div>
             <div class="date">
-                <p>${card.calculo.card.cardBody.date}</p>
+                <p>${item.calculo.card.cardBody.date}</p>
             </div>
             <div class="redirect">
-                <a href="${card.calculo.card.cardBody.videoHref}" target="_blank"><i class='bx bx-play'></i>Assistir</a>
+                <a href="${item.calculo.card.cardBody.videoHref}" target="_blank"><i class='bx bx-play'></i>Assistir</a>
             </div>
         </div>
     </div><!-- CARD -->
