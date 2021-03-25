@@ -3,7 +3,7 @@ async function consumeCards(){
         // FÍSICA -------------------------------
 
         if(window.location.pathname == "/fisica/"){
-            var response = await fetch('http://localhost:5000/fisica')
+            var response = await fetch('https://api-seeclasses.vercel.app/fisica')
             
             const data = await response.json();
             show(data)
@@ -13,7 +13,7 @@ async function consumeCards(){
         // CÁLCULO -------------------------------
         
         if(window.location.pathname == "/calculo/"){
-            response = await fetch('http://localhost:5000/calculo')
+            response = await fetch('https://api-seeclasses.vercel.app/calculo')
             
             const data = await response.json();
             show(data)
@@ -22,7 +22,7 @@ async function consumeCards(){
         // CÁLCULO VETORIAL -------------------------------
         
         if(window.location.pathname == "/calculo-vetorial/"){
-            response = await fetch('http://localhost:5000/calculo-vetorial')
+            response = await fetch('https://api-seeclasses.vercel.app/calculo-vetorial')
             
             const data = await response.json();
             show(data)
@@ -31,7 +31,7 @@ async function consumeCards(){
         // INTRO COMPUTADOR -------------------------------
         
         if(window.location.pathname == "/intro-computador/"){
-            response = await fetch('http://localhost:5000/intro-computador')
+            response = await fetch('https://api-seeclasses.vercel.app/intro-computador')
             
             const data = await response.json();
             show(data)
@@ -40,7 +40,7 @@ async function consumeCards(){
         // INTRO PROGRAMAÇÃO -------------------------------
         
         if(window.location.pathname == "/intro-programacao/"){
-            response = await fetch('http://localhost:5000/intro-programacao')
+            response = await fetch('https://api-seeclasses.vercel.app/intro-programacao')
             
             const data = await response.json();
             show(data)
