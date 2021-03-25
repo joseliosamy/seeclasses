@@ -47,7 +47,7 @@ async function consumeCards(){
         }
         // END INTRO PROGRAMAÇÃO -------------------------------
     }
-    
+
     catch(error){
         console.log(error)
     }
