@@ -12,7 +12,7 @@ async function consumeCards(){
 }
 consumeCards();
 
-if(window.location.pathname == "/calculo/"){
+if(window.location.pathname == "/calculo"){
 function show(items){
     let output = "";
 
