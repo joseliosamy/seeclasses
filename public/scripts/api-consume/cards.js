@@ -21,17 +21,17 @@ if(window.location.pathname == "/calculo/"){
             output += `
             <div class="card">
             <div class="card_name">
-                <h2>${materia.fisica[i].card}</h2>
+                <h2>${materia.fisica[i].card.cardHeader.title}</h2>
             </div>
             <div class="card_body"> 
                 <div class="thumbl">
-                    <img src="" alt="">
+                    <img src="${materia.fisica[i].card.cardBody.imgSrc}" alt="${materia.fisica[i].card.cardBody.imgAlt}">
                 </div>
                 <div class="date">
-                    <p></p>
+                    <p>${materia.fisica[i].card.cardBody.date}</p>
                 </div>
                 <div class="redirect">
-                    <a href="$" target="_blank"><i class='bx bx-play'></i>Assistir</a>
+                    <a href="${materia.fisica[i].card.cardBody.aHref}" target="_blank"><i class='bx bx-play'></i>Assistir</a>
                 </div>
             </div>
         </div><!-- CARD -->
