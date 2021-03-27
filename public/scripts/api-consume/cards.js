@@ -4,6 +4,7 @@ async function consumeCards(){
         
         const data = await response.json();
         show(data)
+        
     }
 
     catch(error){
@@ -14,10 +15,11 @@ consumeCards();
 
 //CALCULO ------------------------------------------------
 
-if(window.location.pathname == "/calculo/"){
+if(window.location.pathname == "/calculo"){
     function show(items){
-        let output = "";
+        var output = "";
         var materia = items[0]
+
         for(i=0; i <= materia.calculo.length;i++){
             output += `
             <div class="card">
@@ -47,7 +49,7 @@ if(window.location.pathname == "/calculo/"){
 
 //FÍSICA ------------------------------------------------
 
-else if(window.location.pathname == "/fisica/"){
+else if(window.location.pathname == "/fisica"){
     function show(items){
         let output = "";
         var materia = items[1]
@@ -80,7 +82,7 @@ else if(window.location.pathname == "/fisica/"){
 
 //VETORIAL ------------------------------------------------
 
-else if(window.location.pathname == "/calculo-vetorial/"){
+else if(window.location.pathname == "/calculo-vetorial"){
     function show(items){
         let output = "";
         var materia = items[2]
@@ -113,7 +115,7 @@ else if(window.location.pathname == "/calculo-vetorial/"){
 
 //INTRODUÇÃO A PROGRAMAÇÃO --------------------------------
 
-else if(window.location.pathname == "/intro-programacao/"){
+else if(window.location.pathname == "/intro-programacao"){
     function show(items){
         let output = "";
         var materia = items[3]
@@ -146,7 +148,7 @@ else if(window.location.pathname == "/intro-programacao/"){
 
 //INTRODUÇÃO AO COMPUTADOR --------------------------------
 
-else if(window.location.pathname == "/intro-computador/"){
+else if(window.location.pathname == "/intro-computador"){
     function show(items){
         let output = "";
         var materia = items[4]

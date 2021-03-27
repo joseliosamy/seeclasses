@@ -55,6 +55,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-size: .7rem;
+    margin-bottom: 5px;
 }
 .card_body{
     width: 100%;
