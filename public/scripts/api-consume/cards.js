@@ -12,30 +12,35 @@ async function consumeCards(){
 }
 consumeCards();
 
-if(window.location.pathname == "/calculo"){
-function show(items){
-    let output = "";
+if(window.location.pathname == "/calculo/"){
+    function show(items){
+        let output = "";
+        var materia = items[1]
 
-    for(let card of cards){
-        output += `
-        <div class="card">
-        <div class="card_name">
-            <h2>${card.calculo.item.cardHeader.title}</h2>
-        </div>
-        <div class="card_body">
-            <div class="thumbl">
-                <img src="${card.calculo.item.cardBody.cardImage}" alt="${item.calculo.card.cardBody.imageAlt}">
+        for(i=0; i <= materia.fisica.length;i++){
+            output += `
+            <div class="card">
+            <div class="card_name">
+                <h2>${materia.fisica[i].card}</h2>
             </div>
-            <div class="date">
-                <p>${card.calculo.item.cardBody.date}</p>
+            <div class="card_body"> 
+                <div class="thumbl">
+                    <img src="" alt="">
+                </div>
+                <div class="date">
+                    <p></p>
+                </div>
+                <div class="redirect">
+                    <a href="$" target="_blank"><i class='bx bx-play'></i>Assistir</a>
+                </div>
             </div>
-            <div class="redirect">
-                <a href="${card.calculo.item.cardBody.videoHref}" target="_blank"><i class='bx bx-play'></i>Assistir</a>
-            </div>
-        </div>
-    </div><!-- CARD -->
-        `
+        </div><!-- CARD -->
+            `
+            console.log(materia.fisica[i].card)
+            if(i == materia.fisica.length - 1){
+                break
+            }//CONTROLE PARA NAO BUGAR O FOR. AQUELE MENOS 1 ALI SALVOU A VIDA
+        }
+        document.querySelector('.cards_wrapper').insertAdjacentHTML("afterbegin", output)
     }
-    document.querySelector('.cards_wrapper').insertAdjacentHTML("afterbegin", output)
-}
 }
