@@ -1,3 +1,4 @@
+
 @media(max-width: 1100px){
     nav ul a{
         font-size: .8rem;
@@ -47,6 +48,17 @@
     }
     #home{
         background: none;
+    }
+    .apresentation h1{
+        width: 100%;
+    }
+    .video_full .video iframe{
+        height: 250px;
+    }
+}
+@media(max-width:440px){
+    .video_full .video iframe{
+        height: 180px;
     }
 }
 @keyframes teste{

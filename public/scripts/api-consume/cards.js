@@ -14,7 +14,7 @@ consumeCards();
 
 //CALCULO ------------------------------------------------
 
-if(window.location.pathname == "/calculo"){
+if(window.location.pathname == "/calculo/"){
     function show(items){
         let output = "";
         var materia = items[0]
