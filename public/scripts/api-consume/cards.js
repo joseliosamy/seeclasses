@@ -16,7 +16,7 @@ consumeCards();
 
 //CALCULO ------------------------------------------------
 
-if(window.location.pathname == "/calculo/"){
+if(window.location.pathname == "/calculo"){
     function show(items){
         let output = "";
         var materia = items[0]
@@ -71,8 +71,8 @@ if(window.location.pathname == "/calculo/"){
                                 `
                                 )//insertadjacent
                             }//else, SE NÃO TIVER UM VIDEO_FULL ELE INJETA 1
-                            console.log(video_id + " api")
-                            console.log(e.getAttribute('data-id') + " html")
+                            // console.log(video_id + " api")
+                            // console.log(e.getAttribute('data-id') + " html")
                             break
                         }//if, CONSEGUIR O ID DO CARD E DA API
                         if(i == materia.calculo.length - 1){
@@ -87,7 +87,7 @@ if(window.location.pathname == "/calculo/"){
 
 //FÍSICA ------------------------------------------------
 
-else if(window.location.pathname == "/fisica/"){
+else if(window.location.pathname == "/fisica"){
     function show(items){
         let output = "";
         var materia = items[1]
@@ -105,7 +105,7 @@ else if(window.location.pathname == "/fisica/"){
                     <p>${materia.fisica[i].card.cardBody.date}</p>
                 </div>
                 <div class="redirect">
-                    <a href="${materia.fisica[i].card.cardBody.aHref}" target="_blank"><i class='bx bx-play'></i>Assistir</a>
+                    <a class="open_video" data-id="${i + 1}"><i class='bx bx-play'></i>Assistir</a>
                 </div>
             </div>
         </div><!-- CARD -->
@@ -114,8 +114,46 @@ else if(window.location.pathname == "/fisica/"){
                 break
             }//CONTROLE PARA NAO BUGAR O FOR. AQUELE MENOS 1 ALI SALVOU A VIDA
         }
-        return document.querySelector('.cards_wrapper').insertAdjacentHTML("afterbegin", output)     
-    } 
+        document.querySelector('.cards_wrapper').innerHTML = output
+
+        setTimeout(() => {
+            var videos_wrapper = document.querySelector("#videos_wrapper");
+            const open_video = document.querySelectorAll(".open_video")
+    
+            
+            open_video.forEach(e => {
+                e.addEventListener("click", ()=>{
+                    for(i=0; i<=materia.fisica.length; i++){
+                        var video_id = materia.fisica[i].card.id // id na api
+                       
+                        if(e.getAttribute('data-id') == video_id){
+                            if(document.querySelector(".video_full")){
+                                if((e.getAttribute('data-id') == video_id)){
+                                    return // SE JÁ TIVER UM VIDEO_FULL NA PÁGINA ELE SÓ FAZ UM RETURN
+                                }//if                    
+                            }/*if*/else{
+                                videos_wrapper.insertAdjacentHTML("afterbegin", 
+                                `
+                                    <div class="video_full">
+                                        <div class="video">
+                                            <iframe src="https://www.youtube.com/embed/${materia.fisica[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" frameborder="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                `
+                                )//insertadjacent
+                            }//else, SE NÃO TIVER UM VIDEO_FULL ELE INJETA 1
+                            // console.log(video_id + " api")
+                            // console.log(e.getAttribute('data-id') + " html")
+                            break
+                        }//if, CONSEGUIR O ID DO CARD E DA API
+                        if(i == materia.fisica.length - 1){
+                            break
+                        }// PARAR O LOOPING 2
+                    }//for 1
+                })//eventlistener
+            })//foreach
+        }, 800);//settimeout
+    }//show
 }
 
 //VETORIAL ------------------------------------------------
@@ -138,7 +176,7 @@ else if(window.location.pathname == "/calculo-vetorial"){
                     <p>${materia.vetorial[i].card.cardBody.date}</p>
                 </div>
                 <div class="redirect">
-                    <a href="${materia.vetorial[i].card.cardBody.aHref}" target="_blank"><i class='bx bx-play'></i>Assistir</a>
+                    <a class="open_video" data-id="${i + 1}"><i class='bx bx-play'></i>Assistir</a>
                 </div>
             </div>
         </div><!-- CARD -->
@@ -147,8 +185,46 @@ else if(window.location.pathname == "/calculo-vetorial"){
                 break
             }//CONTROLE PARA NAO BUGAR O FOR. AQUELE MENOS 1 ALI SALVOU A VIDA
         }
-        return document.querySelector('.cards_wrapper').insertAdjacentHTML("afterbegin", output)     
-    } 
+        document.querySelector('.cards_wrapper').innerHTML = output
+
+        setTimeout(() => {
+            var videos_wrapper = document.querySelector("#videos_wrapper");
+            const open_video = document.querySelectorAll(".open_video")
+    
+            
+            open_video.forEach(e => {
+                e.addEventListener("click", ()=>{
+                    for(i=0; i<=materia.vetorial.length; i++){
+                        var video_id = materia.vetorial[i].card.id // id na api
+                       
+                        if(e.getAttribute('data-id') == video_id){
+                            if(document.querySelector(".video_full")){
+                                if((e.getAttribute('data-id') == video_id)){
+                                    return // SE JÁ TIVER UM VIDEO_FULL NA PÁGINA ELE SÓ FAZ UM RETURN
+                                }//if                    
+                            }/*if*/else{
+                                videos_wrapper.insertAdjacentHTML("afterbegin", 
+                                `
+                                    <div class="video_full">
+                                        <div class="video">
+                                            <iframe src="https://www.youtube.com/embed/${materia.vetorial[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" frameborder="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                `
+                                )//insertadjacent
+                            }//else, SE NÃO TIVER UM VIDEO_FULL ELE INJETA 1
+                            // console.log(video_id + " api")
+                            // console.log(e.getAttribute('data-id') + " html")
+                            break
+                        }//if, CONSEGUIR O ID DO CARD E DA API
+                        if(i == materia.vetorial.length - 1){
+                            break
+                        }// PARAR O LOOPING 2
+                    }//for 1
+                })//eventlistener
+            })//foreach
+        }, 800);//settimeout
+    }//show
 }
 
 //INTRODUÇÃO A PROGRAMAÇÃO --------------------------------
@@ -171,7 +247,7 @@ else if(window.location.pathname == "/intro-programacao"){
                     <p>${materia.introProg[i].card.cardBody.date}</p>
                 </div>
                 <div class="redirect">
-                    <a href="${materia.introProg[i].card.cardBody.aHref}" target="_blank"><i class='bx bx-play'></i>Assistir</a>
+                    <a class="open_video" data-id="${i + 1}"><i class='bx bx-play'></i>Assistir</a>
                 </div>
             </div>
         </div><!-- CARD -->
@@ -180,8 +256,46 @@ else if(window.location.pathname == "/intro-programacao"){
                 break
             }//CONTROLE PARA NAO BUGAR O FOR. AQUELE MENOS 1 ALI SALVOU A VIDA
         }
-        return document.querySelector('.cards_wrapper').insertAdjacentHTML("afterbegin", output)     
-    } 
+        document.querySelector('.cards_wrapper').innerHTML = output
+
+        setTimeout(() => {
+            var videos_wrapper = document.querySelector("#videos_wrapper");
+            const open_video = document.querySelectorAll(".open_video")
+    
+            
+            open_video.forEach(e => {
+                e.addEventListener("click", ()=>{
+                    for(i=0; i<=materia.introProg.length; i++){
+                        var video_id = materia.introProg[i].card.id // id na api
+                       
+                        if(e.getAttribute('data-id') == video_id){
+                            if(document.querySelector(".video_full")){
+                                if((e.getAttribute('data-id') == video_id)){
+                                    return // SE JÁ TIVER UM VIDEO_FULL NA PÁGINA ELE SÓ FAZ UM RETURN
+                                }//if                    
+                            }/*if*/else{
+                                videos_wrapper.insertAdjacentHTML("afterbegin", 
+                                `
+                                    <div class="video_full">
+                                        <div class="video">
+                                            <iframe src="https://www.youtube.com/embed/${materia.introProg[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" frameborder="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                `
+                                )//insertadjacent
+                            }//else, SE NÃO TIVER UM VIDEO_FULL ELE INJETA 1
+                            // console.log(video_id + " api")
+                            // console.log(e.getAttribute('data-id') + " html")
+                            break
+                        }//if, CONSEGUIR O ID DO CARD E DA API
+                        if(i == materia.introProg.length - 1){
+                            break
+                        }// PARAR O LOOPING 2
+                    }//for 1
+                })//eventlistener
+            })//foreach
+        }, 800);//settimeout
+    }//show
 }
 
 //INTRODUÇÃO AO COMPUTADOR --------------------------------
@@ -204,7 +318,7 @@ else if(window.location.pathname == "/intro-computador"){
                     <p>${materia.introComp[i].card.cardBody.date}</p>
                 </div>
                 <div class="redirect">
-                    <a href="${materia.introComp[i].card.cardBody.aHref}" target="_blank"><i class='bx bx-play'></i>Assistir</a>
+                    <a class="open_video" data-id="${i + 1}"><i class='bx bx-play'></i>Assistir</a>
                 </div>
             </div>
         </div><!-- CARD -->
@@ -213,6 +327,44 @@ else if(window.location.pathname == "/intro-computador"){
                 break
             }//CONTROLE PARA NAO BUGAR O FOR. AQUELE MENOS 1 ALI SALVOU A VIDA
         }
-        return document.querySelector('.cards_wrapper').insertAdjacentHTML("afterbegin", output)     
-    } 
+        document.querySelector('.cards_wrapper').innerHTML = output
+
+        setTimeout(() => {
+            var videos_wrapper = document.querySelector("#videos_wrapper");
+            const open_video = document.querySelectorAll(".open_video")
+    
+            
+            open_video.forEach(e => {
+                e.addEventListener("click", ()=>{
+                    for(i=0; i<=materia.introComp.length; i++){
+                        var video_id = materia.introComp[i].card.id // id na api
+                       
+                        if(e.getAttribute('data-id') == video_id){
+                            if(document.querySelector(".video_full")){
+                                if((e.getAttribute('data-id') == video_id)){
+                                    return // SE JÁ TIVER UM VIDEO_FULL NA PÁGINA ELE SÓ FAZ UM RETURN
+                                }//if                    
+                            }/*if*/else{
+                                videos_wrapper.insertAdjacentHTML("afterbegin", 
+                                `
+                                    <div class="video_full">
+                                        <div class="video">
+                                            <iframe src="https://www.youtube.com/embed/${materia.introComp[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" frameborder="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                `
+                                )//insertadjacent
+                            }//else, SE NÃO TIVER UM VIDEO_FULL ELE INJETA 1
+                            // console.log(video_id + " api")
+                            // console.log(e.getAttribute('data-id') + " html")
+                            break
+                        }//if, CONSEGUIR O ID DO CARD E DA API
+                        if(i == materia.introComp.length - 1){
+                            break
+                        }// PARAR O LOOPING 2
+                    }//for 1
+                })//eventlistener
+            })//foreach
+        }, 800);//settimeout
+    }//show
 }
