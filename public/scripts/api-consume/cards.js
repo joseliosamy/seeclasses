@@ -1,5 +1,3 @@
-
-
 async function consumeCards(){
     try{
         var response = await fetch('https://api-seeclasses.vercel.app/')
@@ -57,6 +55,16 @@ if(window.location.pathname == "/calculo"){
                        
                         if(e.getAttribute('data-id') == video_id){
                             if(document.querySelector(".video_full")){
+
+                                document.querySelector(".video").parentElement.removeChild(document.querySelector(".video"))//remove o video
+
+                                document.querySelector(".video_full").insertAdjacentHTML("afterbegin", 
+                                `
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/${materia.calculo[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" frameborder="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                `)//coloca de novo
+
                                 if((e.getAttribute('data-id') == video_id)){
                                     return // SE JÁ TIVER UM VIDEO_FULL NA PÁGINA ELE SÓ FAZ UM RETURN
                                 }//if                    
@@ -87,7 +95,7 @@ if(window.location.pathname == "/calculo"){
 
 //FÍSICA ------------------------------------------------
 
-else if(window.location.pathname == "/fisica"){
+else if(window.location.pathname == "/fisica/"){
     function show(items){
         let output = "";
         var materia = items[1]
@@ -128,6 +136,16 @@ else if(window.location.pathname == "/fisica"){
                        
                         if(e.getAttribute('data-id') == video_id){
                             if(document.querySelector(".video_full")){
+
+                                document.querySelector(".video").parentElement.removeChild(document.querySelector(".video"))//remove o video
+
+                                document.querySelector(".video_full").insertAdjacentHTML("afterbegin", 
+                                `
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/${materia.fisica[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" frameborder="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                `)//coloca de novo
+
                                 if((e.getAttribute('data-id') == video_id)){
                                     return // SE JÁ TIVER UM VIDEO_FULL NA PÁGINA ELE SÓ FAZ UM RETURN
                                 }//if                    
@@ -154,11 +172,11 @@ else if(window.location.pathname == "/fisica"){
             })//foreach
         }, 800);//settimeout
     }//show
-}
+}//if
 
 //VETORIAL ------------------------------------------------
 
-else if(window.location.pathname == "/calculo-vetorial"){
+else if(window.location.pathname == "/calculo-vetorial/"){
     function show(items){
         let output = "";
         var materia = items[2]
@@ -199,6 +217,16 @@ else if(window.location.pathname == "/calculo-vetorial"){
                        
                         if(e.getAttribute('data-id') == video_id){
                             if(document.querySelector(".video_full")){
+
+                                document.querySelector(".video").parentElement.removeChild(document.querySelector(".video"))//remove o video
+
+                                document.querySelector(".video_full").insertAdjacentHTML("afterbegin", 
+                                `
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/${materia.vetorial[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" frameborder="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                `)//coloca de novo
+
                                 if((e.getAttribute('data-id') == video_id)){
                                     return // SE JÁ TIVER UM VIDEO_FULL NA PÁGINA ELE SÓ FAZ UM RETURN
                                 }//if                    
@@ -229,7 +257,7 @@ else if(window.location.pathname == "/calculo-vetorial"){
 
 //INTRODUÇÃO A PROGRAMAÇÃO --------------------------------
 
-else if(window.location.pathname == "/intro-programacao"){
+else if(window.location.pathname == "/intro-programacao/"){
     function show(items){
         let output = "";
         var materia = items[3]
@@ -270,6 +298,16 @@ else if(window.location.pathname == "/intro-programacao"){
                        
                         if(e.getAttribute('data-id') == video_id){
                             if(document.querySelector(".video_full")){
+
+                                document.querySelector(".video").parentElement.removeChild(document.querySelector(".video"))//remove o video
+
+                                document.querySelector(".video_full").insertAdjacentHTML("afterbegin", 
+                                `
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/${materia.introProg[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" frameborder="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                `)//coloca de novo
+
                                 if((e.getAttribute('data-id') == video_id)){
                                     return // SE JÁ TIVER UM VIDEO_FULL NA PÁGINA ELE SÓ FAZ UM RETURN
                                 }//if                    
@@ -300,7 +338,7 @@ else if(window.location.pathname == "/intro-programacao"){
 
 //INTRODUÇÃO AO COMPUTADOR --------------------------------
 
-else if(window.location.pathname == "/intro-computador"){
+else if(window.location.pathname == "/intro-computador/"){
     function show(items){
         let output = "";
         var materia = items[4]
@@ -341,6 +379,16 @@ else if(window.location.pathname == "/intro-computador"){
                        
                         if(e.getAttribute('data-id') == video_id){
                             if(document.querySelector(".video_full")){
+
+                                document.querySelector(".video").parentElement.removeChild(document.querySelector(".video"))//remove o video
+
+                                document.querySelector(".video_full").insertAdjacentHTML("afterbegin", 
+                                `
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/${materia.introComp[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" frameborder="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                `)//coloca de novo
+
                                 if((e.getAttribute('data-id') == video_id)){
                                     return // SE JÁ TIVER UM VIDEO_FULL NA PÁGINA ELE SÓ FAZ UM RETURN
                                 }//if                    
