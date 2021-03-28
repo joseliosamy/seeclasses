@@ -16,82 +16,78 @@ consumeCards();
 
 //CALCULO ------------------------------------------------
 
-if(window.location.pathname == "/calculo"){
+if(window.location.pathname == "/calculo/"){
     function show(items){
-        var output = "";
+        let output = "";
         var materia = items[0]
         for(i=0; i <= materia.calculo.length;i++){
             output += `
             <div class="card">
-                <div class="card_name">
-                    <h2>${materia.calculo[i].card.cardHeader.title}</h2>
+            <div class="card_name">
+                <h2>${materia.calculo[i].card.cardHeader.title}</h2>
+            </div>
+            <div class="card_body"> 
+                <div class="thumbl">
+                    <img src="${materia.calculo[i].card.cardBody.imgSrc}" alt="${materia.calculo[i].card.cardBody.imgAlt}">
                 </div>
-                <div class="card_body"> 
-                    <div class="thumbl">
-                        <img src="${materia.calculo[i].card.cardBody.imgSrc}" alt="${materia.calculo[i].card.cardBody.imgAlt}">
-                    </div>
-                    <div class="date">
-                        <p>${materia.calculo[i].card.cardBody.date}</p>
-                    </div>
-                    <div class="redirect">
-                        <a class="open_video" data-id="${i + 1}"><i class='bx bx-play'></i>Assistir</a>
-                    </div>
+                <div class="date">
+                    <p>${materia.calculo[i].card.cardBody.date}</p>
                 </div>
-            </div><!-- CARD -->
+                <div class="redirect">
+                    <a class="open_video" data-id="${i + 1}"><i class='bx bx-play'></i>Assistir</a>
+                </div>
+            </div>
+        </div><!-- CARD -->
             `
             if(i == materia.calculo.length - 1){
                 break
             }//CONTROLE PARA NAO BUGAR O FOR. AQUELE MENOS 1 ALI SALVOU A VIDA
+        }
+        document.querySelector('.cards_wrapper').innerHTML = output
 
-        document.querySelector('.cards_wrapper').innerHTML = output;          
-    }
-    // APÓS 800MS ELE VAI DECLARAR A CONSTANTE QUE GUARDA OS OPEN_VIDEOS E TAMBÉM VAI APLICAR UM EVENTO DE CLIQUE NELES
-    setTimeout(() => {
-        var videos_wrapper = document.querySelector("#videos_wrapper");
-        const open_video = document.querySelectorAll(".open_video")
-
-        
-        open_video.forEach(e => {
-            e.addEventListener("click", ()=>{
-                for(i=0; i<=materia.calculo.length; i++){
-                    var video_id = materia.calculo[i].card.id // id na api
-                   
-                    if(e.getAttribute('data-id') == video_id){
-                        if(document.querySelector(".video_full")){
-                            if(!(e.getAttribute('data-id') == video_id)){
-                                document.querySelector(".video").parentElement.removeChild(document.querySelector(".video"))
-                            }
-                            return // SE JÁ TIVER UM VIDEO_FULL NA PÁGINA ELE SÓ FAZ UM RETURN
-                        }
-                        else{
-                            videos_wrapper.insertAdjacentHTML("afterbegin", 
-                            `
-                                <div class="video_full">
-                                    <div class="video">
-                                        <iframe src="https://www.youtube.com/embed/${materia.calculo[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" frameborder="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        setTimeout(() => {
+            var videos_wrapper = document.querySelector("#videos_wrapper");
+            const open_video = document.querySelectorAll(".open_video")
+    
+            
+            open_video.forEach(e => {
+                e.addEventListener("click", ()=>{
+                    for(i=0; i<=materia.calculo.length; i++){
+                        var video_id = materia.calculo[i].card.id // id na api
+                       
+                        if(e.getAttribute('data-id') == video_id){
+                            if(document.querySelector(".video_full")){
+                                if((e.getAttribute('data-id') == video_id)){
+                                    return // SE JÁ TIVER UM VIDEO_FULL NA PÁGINA ELE SÓ FAZ UM RETURN
+                                }//if                    
+                            }/*if*/else{
+                                videos_wrapper.insertAdjacentHTML("afterbegin", 
+                                `
+                                    <div class="video_full">
+                                        <div class="video">
+                                            <iframe src="https://www.youtube.com/embed/${materia.calculo[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" frameborder="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
                                     </div>
-                                </div>
-                            `
-                            )
-                        }// SE NÃO TIVER UM VIDEO_FULL ELE INJETA 1
-                        console.log(video_id + " api")
-                        console.log(e.getAttribute('data-id') + " html")
-                        break
-                    }// CONSEGUIR O ID DO CARD E DA API
-                    if(i == materia.calculo.length - 1){
-                        break
-                    }// PARAR O LOOPING 2
-                }
-
-            }) 
-        })
-    }, 800);
-}
-}
+                                `
+                                )//insertadjacent
+                            }//else, SE NÃO TIVER UM VIDEO_FULL ELE INJETA 1
+                            console.log(video_id + " api")
+                            console.log(e.getAttribute('data-id') + " html")
+                            break
+                        }//if, CONSEGUIR O ID DO CARD E DA API
+                        if(i == materia.calculo.length - 1){
+                            break
+                        }// PARAR O LOOPING 2
+                    }//for 1
+                })//eventlistener
+            })//foreach
+        }, 800);//settimeout
+    }//show
+}//if
 
 //FÍSICA ------------------------------------------------
 
-else if(window.location.pathname == "/fisica"){
+else if(window.location.pathname == "/fisica/"){
     function show(items){
         let output = "";
         var materia = items[1]
