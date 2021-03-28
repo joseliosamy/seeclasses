@@ -2,6 +2,7 @@
 
 :root{
     --color-background-light: #fff;
+    --color-background-dark: rgb(37, 37, 37);
     --color-header: rgba(37, 37, 37, 0.9);
     --color-card: rgba(37, 37, 37, 0.150);
     --color-text-header: #D9D9D9;

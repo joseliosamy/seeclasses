@@ -87,6 +87,7 @@
     justify-content: center;
     transform: translateX(-5px);
     transition: 120ms;
+    cursor: pointer;
 }
 .card_body .redirect:hover a{
     color: var(--color-text-hover);

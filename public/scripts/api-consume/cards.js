@@ -1,10 +1,11 @@
+
+
 async function consumeCards(){
     try{
         var response = await fetch('https://api-seeclasses.vercel.app/')
         
         const data = await response.json();
         show(data)
-        
     }
 
     catch(error){
@@ -19,32 +20,73 @@ if(window.location.pathname == "/calculo"){
     function show(items){
         var output = "";
         var materia = items[0]
-
         for(i=0; i <= materia.calculo.length;i++){
             output += `
             <div class="card">
-            <div class="card_name">
-                <h2>${materia.calculo[i].card.cardHeader.title}</h2>
-            </div>
-            <div class="card_body"> 
-                <div class="thumbl">
-                    <img src="${materia.calculo[i].card.cardBody.imgSrc}" alt="${materia.calculo[i].card.cardBody.imgAlt}">
+                <div class="card_name">
+                    <h2>${materia.calculo[i].card.cardHeader.title}</h2>
                 </div>
-                <div class="date">
-                    <p>${materia.calculo[i].card.cardBody.date}</p>
+                <div class="card_body"> 
+                    <div class="thumbl">
+                        <img src="${materia.calculo[i].card.cardBody.imgSrc}" alt="${materia.calculo[i].card.cardBody.imgAlt}">
+                    </div>
+                    <div class="date">
+                        <p>${materia.calculo[i].card.cardBody.date}</p>
+                    </div>
+                    <div class="redirect">
+                        <a class="open_video" data-id="${i + 1}"><i class='bx bx-play'></i>Assistir</a>
+                    </div>
                 </div>
-                <div class="redirect">
-                    <a href="${materia.calculo[i].card.cardBody.aHref}" target="_blank"><i class='bx bx-play'></i>Assistir</a>
-                </div>
-            </div>
-        </div><!-- CARD -->
+            </div><!-- CARD -->
             `
             if(i == materia.calculo.length - 1){
                 break
             }//CONTROLE PARA NAO BUGAR O FOR. AQUELE MENOS 1 ALI SALVOU A VIDA
-        }
-        return document.querySelector('.cards_wrapper').insertAdjacentHTML("afterbegin", output)     
-    } 
+
+        document.querySelector('.cards_wrapper').innerHTML = output;          
+    }
+    // APÓS 800MS ELE VAI DECLARAR A CONSTANTE QUE GUARDA OS OPEN_VIDEOS E TAMBÉM VAI APLICAR UM EVENTO DE CLIQUE NELES
+    setTimeout(() => {
+        var videos_wrapper = document.querySelector("#videos_wrapper");
+        const open_video = document.querySelectorAll(".open_video")
+
+        
+        open_video.forEach(e => {
+            e.addEventListener("click", ()=>{
+                for(i=0; i<=materia.calculo.length; i++){
+                    var video_id = materia.calculo[i].card.id // id na api
+                   
+                    if(e.getAttribute('data-id') == video_id){
+                        if(document.querySelector(".video_full")){
+                            if(!(e.getAttribute('data-id') == video_id)){
+                                document.querySelector(".video").parentElement.removeChild(document.querySelector(".video"))
+                            }
+                            return // SE JÁ TIVER UM VIDEO_FULL NA PÁGINA ELE SÓ FAZ UM RETURN
+                        }
+                        else{
+                            videos_wrapper.insertAdjacentHTML("afterbegin", 
+                            `
+                                <div class="video_full">
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/${materia.calculo[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" frameborder="none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            `
+                            )
+                        }// SE NÃO TIVER UM VIDEO_FULL ELE INJETA 1
+                        console.log(video_id + " api")
+                        console.log(e.getAttribute('data-id') + " html")
+                        break
+                    }// CONSEGUIR O ID DO CARD E DA API
+                    if(i == materia.calculo.length - 1){
+                        break
+                    }// PARAR O LOOPING 2
+                }
+
+            }) 
+        })
+    }, 800);
+}
 }
 
 //FÍSICA ------------------------------------------------
