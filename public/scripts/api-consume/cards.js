@@ -14,7 +14,7 @@ consumeCards();
 
 //CALCULO ------------------------------------------------
 
-if(window.location.pathname == "/calculo/"){
+if(window.location.pathname == "/calculo"){
     function show(items){
         let output = "";
         var materia = items[0]
@@ -50,10 +50,7 @@ if(window.location.pathname == "/calculo/"){
             
             open_video.forEach(e => {
                 e.addEventListener("click", ()=>{
-                    window.scroll({
-                        top:0,
-                        behavior:'smooth'
-                    })//a cada clique ele redireciona a página para o topo
+                    scrollTop()//a cada clique ele redireciona a página para o topo
                     for(i=0; i<=materia.calculo.length; i++){
                         var video_id = materia.calculo[i].card.id // id na api
                        
@@ -135,6 +132,7 @@ else if(window.location.pathname == "/fisica"){
             
             open_video.forEach(e => {
                 e.addEventListener("click", ()=>{
+                    scrollTop()//a cada clique ele redireciona a página para o topo
                     for(i=0; i<=materia.fisica.length; i++){
                         var video_id = materia.fisica[i].card.id // id na api
                        
@@ -216,6 +214,7 @@ else if(window.location.pathname == "/calculo-vetorial"){
             
             open_video.forEach(e => {
                 e.addEventListener("click", ()=>{
+                    scrollTop()//a cada clique ele redireciona a página para o topo
                     for(i=0; i<=materia.vetorial.length; i++){
                         var video_id = materia.vetorial[i].card.id // id na api
                        
@@ -297,6 +296,7 @@ else if(window.location.pathname == "/intro-programacao"){
             
             open_video.forEach(e => {
                 e.addEventListener("click", ()=>{
+                    scrollTop()//a cada clique ele redireciona a página para o topo
                     for(i=0; i<=materia.introProg.length; i++){
                         var video_id = materia.introProg[i].card.id // id na api
                        
@@ -378,6 +378,7 @@ else if(window.location.pathname == "/intro-computador"){
             
             open_video.forEach(e => {
                 e.addEventListener("click", ()=>{
+                    scrollTop()//a cada clique ele redireciona a página para o topo
                     for(i=0; i<=materia.introComp.length; i++){
                         var video_id = materia.introComp[i].card.id // id na api
                        
@@ -419,4 +420,10 @@ else if(window.location.pathname == "/intro-computador"){
             })//foreach
         }, 800);//settimeout
     }//show
+}
+function scrollTop(){
+    window.scroll({
+        top:0,
+        behavior:'smooth'
+    })//a cada clique ele redireciona a página para o topo
 }
