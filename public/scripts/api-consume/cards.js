@@ -50,6 +50,10 @@ if(window.location.pathname == "/calculo/"){
             
             open_video.forEach(e => {
                 e.addEventListener("click", ()=>{
+                    window.scroll({
+                        top:0,
+                        behavior:'smooth'
+                    })//a cada clique ele redireciona a página para o topo
                     for(i=0; i<=materia.calculo.length; i++){
                         var video_id = materia.calculo[i].card.id // id na api
                        
