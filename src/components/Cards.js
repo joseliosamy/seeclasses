@@ -143,7 +143,7 @@ export default function Cards() {
               <div class="bar">
                 <div class="info">
                   <p>${materia.fisica[i].card.cardBody.date.substring(0,5)}</p> 
-                  <p>Fred</p>
+                  <p>Paulo Cesar</p>
                 </div>
                 <div class="see">
                   <p data-id="${i + 1}">       
@@ -235,7 +235,7 @@ export default function Cards() {
               <div class="bar">
                 <div class="info">
                   <p>${materia.vetorial[i].card.cardBody.date.substring(0,5)}</p> 
-                  <p>Fred</p>
+                  <p>Valdeniza</p>
                 </div>
                 <div class="see">
                   <p data-id="${i + 1}">       
@@ -326,7 +326,7 @@ export default function Cards() {
               <div class="bar">
                 <div class="info">
                   <p>${materia.introProg[i].card.cardBody.date.substring(0,5)}</p> 
-                  <p>Fred</p>
+                  <p>Carlos</p>
                 </div>
                 <div class="see">
                   <p data-id="${i + 1}">       
@@ -417,7 +417,7 @@ export default function Cards() {
               <div class="bar">
                 <div class="info">
                   <p>${materia.introComp[i].card.cardBody.date.substring(0,5)}</p> 
-                  <p>Fred</p>
+                  <p>Hamilton</p>
                 </div>
                 <div class="see">
                   <p data-id="${i + 1}">       

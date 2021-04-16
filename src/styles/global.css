@@ -49,3 +49,112 @@ a{
   width: 100%;
   min-height: 100vh;
 }
+
+
+
+
+
+  
+.cardsWrapper{
+  height: 100%;
+  padding:2rem 5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card{
+  width: 210px;
+  min-height: 260px;
+  max-height: 100%;
+  background-color: rgba(67, 69, 73, 0.753);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: 300ms;
+  box-shadow: 0 0 15px #0e0e0e;
+  margin: 15px;
+}
+.cardHeader{
+  height: 120px;
+}
+.cardHeader img{
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+.cardBody{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cardBody .descrip{
+  margin: auto;
+  text-align: center;
+  padding: 15px 10px 25px 10px;
+}
+.cardBody .descrip p:first-child{
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.cardBody .descrip p:last-child{
+  font-size: .8rem;
+}
+.cardBody .bar{
+  width: 100%;
+  min-height: 45px;
+  background: linear-gradient(90deg, #005fcc 0%, #007acc 100%);
+  border-radius: 0 0 8px 8px;
+  border-top: 1px solid var(--line);
+}
+.cardBody .bar .info{
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cardBody .bar .info p:first-child{
+  font-size: .8rem;
+  border-right: 1px solid var(--line);
+}
+.cardBody .bar p{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardBody .bar .see {
+  height: 40px;
+  background-color: #b3b3b32f;
+  border-radius: 0 0 8px 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 200ms;
+}
+.cardBody .bar .see:hover{
+  background-color: #b3b3b359;
+}
+.cardBody .bar .see p{
+  margin-right: 9px;
+}
+.cardBody .bar .see p svg{
+  width: 20px;
+  fill: var(--text);
+  margin-right: 5px;
+}
+
+@media(max-width: 720px){/*Mobile*/
+  .cardsWrapper{
+    padding: 1rem;
+  }
+}
+
+
+
+
+

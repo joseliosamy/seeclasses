@@ -1,7 +1,7 @@
 
 import '../styles/global.css';
 import '../styles/nprogress.css'
-import '../styles/components/cards.css';
+// import '../styles/components/cards.css';
 import Header from '../components/Header';
 import NProgress from 'nprogress';
 import Router from 'next/router';
