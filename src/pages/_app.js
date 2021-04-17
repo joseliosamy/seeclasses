@@ -5,6 +5,7 @@ import '../styles/nprogress.css'
 import Header from '../components/Header';
 import NProgress from 'nprogress';
 import Router from 'next/router';
+import Footer from '../components/Footer';
 
 NProgress.configure({
   parent: '#__next',
@@ -31,6 +32,7 @@ function MyApp({ Component, pageProps }) {
       <main>
         <Component {...pageProps} />
       </main> 
+      <Footer />
     </div>
   );
 }

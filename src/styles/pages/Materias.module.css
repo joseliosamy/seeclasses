@@ -1,0 +1,96 @@
+
+.wrapper{
+  padding: 5rem 5rem;
+  min-height: calc(100vh - 60px);
+  display: flex;
+
+  position: relative;
+}
+.apresentation{
+  width: 27%;
+  min-height: 80vh;
+
+  border-radius: 8px;
+  margin-top: 11px;
+  padding: 3rem 1rem;
+  display: flex;
+
+  align-items: center;
+
+  flex-direction: column;
+  text-align: center;
+
+  background-color: rgba(67, 69, 73, 0.199);;
+  border:1px solid rgb(67, 69, 73);
+}
+.apresentation p{
+  font-size: .9rem;
+}
+.apresentation p:last-child{
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(67, 69, 73);
+}
+.apresentation img{
+  width: 80%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+.cardsWrapper{
+  width: 70%;
+  margin-left: auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cardsWrapper .card{
+  width: 250px;
+  min-height: 320px;
+  background-color: rgba(67, 69, 73, 0.753);
+  border-radius: 8px;
+  margin: 10px;
+}
+.cardsWrapper .card .cardHeader{
+  text-align: center;
+  padding: 20px 0;
+}
+.cardsWrapper .card .cardHeader h2{
+  font-weight: 500;
+}
+.cardsWrapper .card .cardBody{
+  width: 100%;
+}
+.cardsWrapper .card .cardBody .image{
+  width: 100%;
+  height: 145px;
+}
+.cardsWrapper .card .cardBody .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cardsWrapper .card .cardBody .descrip{
+  padding: 15px 10px 25px 10px;
+  text-align: center;
+  font-size: .9rem;
+}
+.cardsWrapper .card .cardBody .redirect{
+  height: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardsWrapper .card .cardBody .redirect a{
+  padding: 10px 50px;
+  background-image: linear-gradient(300deg, #046ce2, #0092f3, #005fcc);
+  background-size: 200% 200%;
+  transition: .6s;
+  border-radius: 8px;
+  transition: 200ms;
+}
+.cardsWrapper .card .cardBody .redirect a:hover{
+  background-position: 100% 50%;
+}

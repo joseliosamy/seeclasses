@@ -18,7 +18,7 @@ export default function Header() {
       <nav className={styles.nav}>
         {/* calculo */}
         <div className={styles.anchor}>
-          <Link href="/materia/calculo">
+          <Link href="/materias/calculo">
             <a>
               <svg className={styles.headerSvg} id="Capa_1" x="0px" y="0px"
               viewBox="0 0 215.76 215.76">
@@ -62,7 +62,7 @@ export default function Header() {
         
         {/* fisica */}
         <div className={styles.anchor}>
-          <Link href="/materia/fisica">
+          <Link href="/materias/fisica">
             <a>
             <svg className={styles.headerSvg} viewBox="0 0 512 512" enableBackground="new 0 0 512 512">
               <g>
@@ -79,7 +79,7 @@ export default function Header() {
 
         {/* vetorial */}
         <div className={styles.anchor}>
-          <Link href="/materia/calculo-vetorial">
+          <Link href="/materias/calculo-vetorial">
             <a>
             <svg className={styles.headerSvg} id="Layer_1" x="0px" y="0px"
               viewBox="0 0 347.537 347.537" enableBackground="new 0 0 347.537 347.537" fill="#8b949e">
@@ -122,7 +122,7 @@ export default function Header() {
 
         {/* intro prog */}
         <div className={styles.anchor}>
-          <Link href="/materia/intro-programacao">
+          <Link href="/materias/intro-programacao">
             <a>
               <svg className={styles.headerSvg} id="Capa_1"  x="0px" y="0px"
                 viewBox="0 0 384.974 384.974" enableBackground="new 0 0 384.974 384.974;" fill="#8b949e">
@@ -186,7 +186,7 @@ export default function Header() {
 
         {/* intro comp */}
         <div className={styles.anchor}>
-          <Link href="/materia/intro-computador">
+          <Link href="/materias/intro-computador">
             <a>
               <svg className={styles.headerSvg} id="Capa_1"  x="0px" y="0px"
                 viewBox="0 0 487.8 487.8" enableBackground="new 0 0 487.8 487.8;" fill="#8b949e">

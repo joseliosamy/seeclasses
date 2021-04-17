@@ -28,7 +28,7 @@ export default function Cards() {
     
     //CALCULO
     //VERIFICAR A PATHNAME, E INSERIR O CONTEUDO DE ACORDO
-    if(window.location.pathname == `/materia/calculo`){
+    if(window.location.pathname == `/materias/calculo`){
       //VERIFICAR SE A QUANTIDADE DE CARDS EXISTENTES NA PÁGINA É IGUAL AO DA API, SE NÃO FOR, RETURN
       if(document.querySelectorAll(".card").length === materia.calculo.length){
         return
@@ -119,7 +119,7 @@ export default function Cards() {
 
     //FISICA
     //VERIFICAR A PATHNAME, E INSERIR O CONTEUDO DE ACORDO
-    if(window.location.pathname == `/materia/fisica`){
+    else if(window.location.pathname == `/materias/fisica`){
       materia = items[1];
       //VERIFICAR SE A QUANTIDADE DE CARDS EXISTENTES NA PÁGINA É IGUAL AO DA API, SE NÃO FOR, RETURN
       if(document.querySelectorAll(".card").length === materia.fisica.length){
@@ -211,7 +211,7 @@ export default function Cards() {
 
     //VETORIAL
     //VERIFICAR A PATHNAME, E INSERIR O CONTEUDO DE ACORDO
-    else if(window.location.pathname == `/materia/calculo-vetorial`){
+    else if(window.location.pathname == `/materias/calculo-vetorial`){
       materia = items[2 ];
       //VERIFICAR SE A QUANTIDADE DE CARDS EXISTENTES NA PÁGINA É IGUAL AO DA API, SE NÃO FOR, RETURN
       if(document.querySelectorAll(".card").length === materia.vetorial.length){
@@ -302,7 +302,7 @@ export default function Cards() {
 
 
     //INTRO PROG
-    else if(window.location.pathname == `/materia/intro-programacao`){
+    else if(window.location.pathname == `/materias/intro-programacao`){
       materia = items[3];
       //VERIFICAR SE A QUANTIDADE DE CARDS EXISTENTES NA PÁGINA É IGUAL AO DA API, SE NÃO FOR, RETURN
       if(document.querySelectorAll(".card").length === materia.introProg.length){
@@ -393,7 +393,7 @@ export default function Cards() {
 
 
     //INTRO PROG
-    else if(window.location.pathname == `/materia/intro-computador`){
+    else if(window.location.pathname == `/materias/intro-computador`){
       materia = items[4];
       //VERIFICAR SE A QUANTIDADE DE CARDS EXISTENTES NA PÁGINA É IGUAL AO DA API, SE NÃO FOR, RETURN
       if(document.querySelectorAll(".card").length === materia.introComp.length){
