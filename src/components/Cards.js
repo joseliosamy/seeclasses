@@ -441,7 +441,7 @@ export default function Cards() {
             <div class="card">
 
             <div class="cardHeader">
-              <img src="https://github.com/joseliosamy/api-seeclasses/blob/master/images/thumbl/introComp/aula${i+1}.jpg?raw=true" alt=""/>
+              <img src="https://github.com/joseliosamy/api-seeclasses/blob/master/images/thumbl/introProg/aula${i+1}.jpg?raw=true" alt=""/>
             </div>
 
             <div class="cardBody">
@@ -558,7 +558,7 @@ export default function Cards() {
 
 
 
-    //INTRO PROG
+    //INTRO COMP
     else if(window.location.pathname == `/materias/intro-computador`){
       materia = items[4];
       //VERIFICAR SE A QUANTIDADE DE CARDS EXISTENTES NA PÁGINA É IGUAL AO DA API, SE NÃO FOR, RETURN
@@ -572,7 +572,7 @@ export default function Cards() {
             <div class="card">
 
             <div class="cardHeader">
-              <img src="https://github.com/joseliosamy/api-seeclasses/blob/master/images/thumbl/introProg/aula${i+1}.jpg?raw=true" alt=""/>
+              <img src="https://github.com/joseliosamy/api-seeclasses/blob/master/images/thumbl/introComp/aula${i+1}.jpg?raw=true" alt=""/>
             </div>
 
             <div class="cardBody">
