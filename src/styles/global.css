@@ -217,7 +217,8 @@ a {
 }
 
 .cardBody .bar .see p {
-    margin-right: 9px;
+    height: 100%;
+    padding-right: 9px;
 }
 
 .cardBody .bar .see p svg {
