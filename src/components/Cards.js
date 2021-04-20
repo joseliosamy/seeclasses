@@ -44,14 +44,13 @@ export default function Cards() {
         // console.log(matter)
         output += `
             <div class="card">
+              <div class="cardHeader">
+                <img src="https://github.com/joseliosamy/api-seeclasses/blob/master/images/thumbl/${matter}/aula${i+1}.jpg?raw=true" alt=""/>
+              </div>
 
-            <div class="cardHeader">
-              <img src="https://github.com/joseliosamy/seeclasses/blob/master/public/images/thumbl/${matter}/aula${i+1}.jpg?raw=true" alt=""/>
-            </div>
-
-            <div class="cardBody">
-              <div class="descrip">
-                <p>${materia.calculo[i].card.cardHeader.title.substring(0, materia.calculo[i].card.cardHeader.title.length - 8)}</p>
+              <div class="cardBody">
+                <div class="descrip">
+                  <p>${materia.calculo[i].card.cardHeader.title.substring(0, materia.calculo[i].card.cardHeader.title.length - 8)}</p>
                 <p>Descrição que abrange todo o conteudo relacionado a aula subsquente</p>
               </div>
               <div class="bar">
@@ -179,7 +178,7 @@ export default function Cards() {
             <div class="card">
 
             <div class="cardHeader">
-              <img src="https://github.com/joseliosamy/seeclasses/blob/master/public/images/thumbl/${matter}/aula${i+1}.jpg?raw=true" alt=""/>
+              <img src="https://github.com/joseliosamy/api-seeclasses/blob/master/images/thumbl/${matter}/aula${i+1}.jpg?raw=true" alt=""/>
             </div>
 
             <div class="cardBody">
@@ -310,9 +309,9 @@ export default function Cards() {
         output += `
             <div class="card">
 
-            <div class="cardHeader">
-              <img src="https://github.com/joseliosamy/seeclasses/blob/master/public/images/thumbl/vetorial/aula${i+1}.jpg?raw=true" alt=""/>
-            </div>
+              <div class="cardHeader">
+                <img src="https://github.com/joseliosamy/api-seeclasses/blob/master/images/thumbl/vetorial/aula${i+1}.jpg?raw=true" alt=""/>
+              </div>
 
             <div class="cardBody">
               <div class="descrip">
@@ -442,7 +441,7 @@ export default function Cards() {
             <div class="card">
 
             <div class="cardHeader">
-              <img src="https://github.com/joseliosamy/seeclasses/blob/master/public/images/thumbl/introProg/aula${i+1}.jpg?raw=true" alt=""/>
+              <img src="https://github.com/joseliosamy/api-seeclasses/blob/master/images/thumbl/introComp/aula${i+1}.jpg?raw=true" alt=""/>
             </div>
 
             <div class="cardBody">
@@ -573,7 +572,7 @@ export default function Cards() {
             <div class="card">
 
             <div class="cardHeader">
-              <img src="https://github.com/joseliosamy/seeclasses/blob/master/public/images/thumbl/introComp/aula${i+1}.jpg?raw=true" alt=""/>
+              <img src="https://github.com/joseliosamy/api-seeclasses/blob/master/images/thumbl/introProg/aula${i+1}.jpg?raw=true" alt=""/>
             </div>
 
             <div class="cardBody">
