@@ -51,7 +51,7 @@ export default function Cards() {
               <div class="cardBody">
                 <div class="descrip">
                   <p>${materia.calculo[i].card.cardHeader.title.substring(0, materia.calculo[i].card.cardHeader.title.length - 8)}</p>
-                <p>Descrição que abrange todo o conteudo relacionado a aula subsquente</p>
+                <p>Descrição em breve.</p>
               </div>
               <div class="bar">
                 <div class="info">
@@ -184,7 +184,7 @@ export default function Cards() {
             <div class="cardBody">
               <div class="descrip">
                 <p>${materia.fisica[i].card.cardHeader.title.substring(0, materia.fisica[i].card.cardHeader.title.length - 8)}</p>
-                <p>Descrição que abrange todo o conteudo relacionado a aula subsquente</p>
+                <p>Descrição em breve.</p>
               </div>
               <div class="bar">
                 <div class="info">
@@ -316,7 +316,7 @@ export default function Cards() {
             <div class="cardBody">
               <div class="descrip">
                 <p>${materia.vetorial[i].card.cardHeader.title.substring(0, materia.vetorial[i].card.cardHeader.title.length - 8)}</p>
-                <p>Descrição que abrange todo o conteudo relacionado a aula subsquente</p>
+                <p>Descrição em breve.</p>
               </div>
               <div class="bar">
                 <div class="info">
@@ -447,7 +447,7 @@ export default function Cards() {
             <div class="cardBody">
               <div class="descrip">
                 <p>${materia.introProg[i].card.cardHeader.title.substring(0, materia.introProg[i].card.cardHeader.title.length - 8)}</p>
-                <p>Descrição que abrange todo o conteudo relacionado a aula subsquente</p>
+                <p>Descrição em breve.</p>
               </div>
               <div class="bar">
                 <div class="info">
@@ -578,7 +578,7 @@ export default function Cards() {
             <div class="cardBody">
               <div class="descrip">
                 <p>${materia.introComp[i].card.cardHeader.title.substring(0, materia.introComp[i].card.cardHeader.title.length - 8)}</p>
-                <p>Descrição que abrange todo o conteudo relacionado a aula subsquente</p>
+                <p>Descrição em breve.</p>
               </div>
               <div class="bar">
                 <div class="info">
