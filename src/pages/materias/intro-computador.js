@@ -9,6 +9,9 @@ export default function introComputador() {
     <Head>
       <title>Matéria - Introdução ao Computador</title>
     </Head>
+    <div className="windowName">
+      <p>Introdução ao Computador</p>
+    </div>
     <Cards />
   </Fragment>
   );

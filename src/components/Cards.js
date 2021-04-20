@@ -1,5 +1,6 @@
 
 import NProgress from 'nprogress';
+import Openvideo from './Openvideo'
 
 export default function Cards() {
   //IR NA API E TRAZER O CONTEUDO E TRANFORMA-LO EM JSON
@@ -25,7 +26,12 @@ export default function Cards() {
     }
     const matter = convertPath()
 
-    
+    function scrollTop(){
+      window.scroll({
+        top: 60,
+        behavior: 'smooth'
+      })
+    }
     //CALCULO
     //VERIFICAR A PATHNAME, E INSERIR O CONTEUDO DE ACORDO
     if(window.location.pathname == `/materias/calculo`){
@@ -112,7 +118,48 @@ export default function Cards() {
           break
         }//CONTROLE PARA NAO BUGAR O FOR. AQUELE MENOS 1 ALI SALVOU A VIDA
       }
-      return document.querySelector('.cardsWrapper').insertAdjacentHTML("afterbegin", output);
+      document.querySelector('.cardsWrapper').insertAdjacentHTML("afterbegin", output);
+
+
+    setTimeout(() => {
+      const openVideo = document.querySelectorAll('.see p');
+      const divWindowName =  document.querySelector('.windowName');
+      const videoFull = document.querySelector('.videoFull');
+    
+      openVideo.forEach(e => {
+        e.addEventListener('click', ()=>{
+          const pageVideoId = e.getAttribute("data-id");
+
+          // BUSCA O TAMANHO DO ARRAY QUE CONTEM OS CARDS
+          for(let i = 0; i < materia.calculo.length; i++){
+            const apiVideoId = materia.calculo[i].card.id;
+
+            if(pageVideoId == apiVideoId){
+              if(document.querySelector('.videoFull')){ 
+                scrollTop()
+                document.querySelector('.video').parentElement.removeChild(document.querySelector('.video'));
+                document.querySelector('.videoFull').insertAdjacentHTML('afterbegin', `
+                  <div class="video">
+                    <iframe src="https://www.youtube.com/embed/${materia.calculo[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                `)
+                return
+              }else{
+                scrollTop()
+                divWindowName.insertAdjacentHTML('afterend', `
+                  <div class="videoFull">
+                    <div class="video">
+                      <iframe src="https://www.youtube.com/embed/${materia.calculo[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                `)
+              }
+
+            }
+          } // for
+        }) // addevent
+      }); // for each
+    }, 400); // settimeout
     }
 
 
@@ -204,7 +251,47 @@ export default function Cards() {
           break
         }//CONTROLE PARA NAO BUGAR O FOR. AQUELE MENOS 1 ALI SALVOU A VIDA
       }
-      return document.querySelector('.cardsWrapper').insertAdjacentHTML("afterbegin", output);
+      document.querySelector('.cardsWrapper').insertAdjacentHTML("afterbegin", output);
+
+      setTimeout(() => {
+        const openVideo = document.querySelectorAll('.see p');
+        const divWindowName =  document.querySelector('.windowName');
+        const videoFull = document.querySelector('.videoFull');
+      
+        openVideo.forEach(e => {
+          e.addEventListener('click', ()=>{
+            const pageVideoId = e.getAttribute("data-id");
+  
+            // BUSCA O TAMANHO DO ARRAY QUE CONTEM OS CARDS
+            for(let i = 0; i < materia.fisica.length; i++){
+              const apiVideoId = materia.fisica[i].card.id;
+  
+              if(pageVideoId == apiVideoId){
+                if(document.querySelector('.videoFull')){
+                  scrollTop()
+                  document.querySelector('.video').parentElement.removeChild(document.querySelector('.video'));
+                  document.querySelector('.videoFull').insertAdjacentHTML('afterbegin', `
+                    <div class="video">
+                      <iframe src="https://www.youtube.com/embed/${materia.fisica[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  `)
+                  return
+                }else{
+                  scrollTop()
+                  divWindowName.insertAdjacentHTML('afterend', `
+                    <div class="videoFull">
+                      <div class="video">
+                        <iframe src="https://www.youtube.com/embed/${materia.fisica[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  `)
+                }
+  
+              }
+            } // for
+          }) // addevent
+        }); // for each
+      }, 400); // settimeout
     }
 
 
@@ -296,7 +383,47 @@ export default function Cards() {
           break
         }//CONTROLE PARA NAO BUGAR O FOR. AQUELE MENOS 1 ALI SALVOU A VIDA
       }
-      return document.querySelector('.cardsWrapper').insertAdjacentHTML("afterbegin", output);
+      document.querySelector('.cardsWrapper').insertAdjacentHTML("afterbegin", output);
+
+      setTimeout(() => {
+        const openVideo = document.querySelectorAll('.see p');
+        const divWindowName =  document.querySelector('.windowName');
+        const videoFull = document.querySelector('.videoFull');
+      
+        openVideo.forEach(e => {
+          e.addEventListener('click', ()=>{
+            const pageVideoId = e.getAttribute("data-id");
+  
+            // BUSCA O TAMANHO DO ARRAY QUE CONTEM OS CARDS
+            for(let i = 0; i < materia.vetorial.length; i++){
+              const apiVideoId = materia.vetorial[i].card.id;
+  
+              if(pageVideoId == apiVideoId){
+                if(document.querySelector('.videoFull')){
+                  scrollTop()
+                  document.querySelector('.video').parentElement.removeChild(document.querySelector('.video'));
+                  document.querySelector('.videoFull').insertAdjacentHTML('afterbegin', `
+                    <div class="video">
+                      <iframe src="https://www.youtube.com/embed/${materia.vetorial[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  `)
+                  return
+                }else{
+                  scrollTop()
+                  divWindowName.insertAdjacentHTML('afterend', `
+                    <div class="videoFull">
+                      <div class="video">
+                        <iframe src="https://www.youtube.com/embed/${materia.vetorial[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  `)
+                }
+  
+              }
+            } // for
+          }) // addevent
+        }); // for each
+      }, 400); // settimeout
     }
 
 
@@ -387,7 +514,47 @@ export default function Cards() {
           break
         }//CONTROLE PARA NAO BUGAR O FOR. AQUELE MENOS 1 ALI SALVOU A VIDA
       }
-      return document.querySelector('.cardsWrapper').insertAdjacentHTML("afterbegin", output);
+      document.querySelector('.cardsWrapper').insertAdjacentHTML("afterbegin", output);
+
+      setTimeout(() => {
+        const openVideo = document.querySelectorAll('.see p');
+        const divWindowName =  document.querySelector('.windowName');
+        const videoFull = document.querySelector('.videoFull');
+      
+        openVideo.forEach(e => {
+          e.addEventListener('click', ()=>{
+            const pageVideoId = e.getAttribute("data-id");
+  
+            // BUSCA O TAMANHO DO ARRAY QUE CONTEM OS CARDS
+            for(let i = 0; i < materia.introProg.length; i++){
+              const apiVideoId = materia.introProg[i].card.id;
+  
+              if(pageVideoId == apiVideoId){
+                if(document.querySelector('.videoFull')){
+                  scrollTop()
+                  document.querySelector('.video').parentElement.removeChild(document.querySelector('.video'));
+                  document.querySelector('.videoFull').insertAdjacentHTML('afterbegin', `
+                    <div class="video">
+                      <iframe src="https://www.youtube.com/embed/${materia.introProg[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  `)
+                  return
+                }else{
+                  scrollTop()
+                  divWindowName.insertAdjacentHTML('afterend', `
+                    <div class="videoFull">
+                      <div class="video">
+                        <iframe src="https://www.youtube.com/embed/${materia.introProg[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  `)
+                }
+  
+              }
+            } // for
+          }) // addevent
+        }); // for each
+      }, 400); // settimeout
     }
 
 
@@ -478,13 +645,54 @@ export default function Cards() {
           break
         }//CONTROLE PARA NAO BUGAR O FOR. AQUELE MENOS 1 ALI SALVOU A VIDA
       }
-      return document.querySelector('.cardsWrapper').insertAdjacentHTML("afterbegin", output);
+      document.querySelector('.cardsWrapper').insertAdjacentHTML("afterbegin", output);
+
+      setTimeout(() => {
+        const openVideo = document.querySelectorAll('.see p');
+        const divWindowName =  document.querySelector('.windowName');
+        const videoFull = document.querySelector('.videoFull');
+      
+        openVideo.forEach(e => {
+          e.addEventListener('click', ()=>{
+            const pageVideoId = e.getAttribute("data-id");
+  
+            // BUSCA O TAMANHO DO ARRAY QUE CONTEM OS CARDS
+            for(let i = 0; i < materia.introComp.length; i++){
+              const apiVideoId = materia.introComp[i].card.id;
+  
+              if(pageVideoId == apiVideoId){
+                if(document.querySelector('.videoFull')){
+                  scrollTop()
+                  document.querySelector('.video').parentElement.removeChild(document.querySelector('.video'));
+                  document.querySelector('.videoFull').insertAdjacentHTML('afterbegin', `
+                    <div class="video">
+                      <iframe src="https://www.youtube.com/embed/${materia.introComp[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  `)
+                  return
+                }else{
+                  scrollTop()
+                  divWindowName.insertAdjacentHTML('afterend', `
+                    <div class="videoFull">
+                      <div class="video">
+                        <iframe src="https://www.youtube.com/embed/${materia.introComp[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  `)
+                }
+  
+              }
+            } // for
+          }) // addevent
+        }); // for each
+      }, 400); // settimeout
     }
   }
   
 
   return(
     <div className="cardsWrapper">
+
     </div>
   );
 }

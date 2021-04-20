@@ -9,6 +9,9 @@ export default function Fisica() {
     <Head>
       <title>Matéria - Física</title>
     </Head>
+    <div className="windowName">
+        <p>Física I</p>
+      </div>
     <Cards />
   </Fragment>
   );

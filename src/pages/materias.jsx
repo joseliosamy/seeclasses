@@ -11,11 +11,7 @@ export default function Materias() {
       <div className={styles.wrapper}>
       <div className={styles.apresentation}>
         <h2>Bem vindo ao See Classes!</h2>
-        <img src="https://media.tenor.com/images/acc4116372dcc4b342cb1a00ae657151/tenor.gif" alt="Hello"/>
-        <p>Você deve estar aqui por causa das aulas gravadas não é mesmo? Então está no lugar certo! Aqui você vai poder assistir de todas as aulas gravadas disponíveis até o presente momento.</p>
-        <br />
-        <br />
-        <p>Veja as matérias disponíveis ao lado.</p>
+        <p>Veja as matérias disponíveis a seguir.</p>
       </div>
     
         <div className={styles.cardsWrapper}>

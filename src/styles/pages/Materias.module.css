@@ -1,18 +1,12 @@
 
 .wrapper{
-  padding: 5rem 5rem;
+  padding: 2rem 5rem 2rem;
   min-height: calc(100vh - 60px);
-  display: flex;
-
-  position: relative;
 }
 .apresentation{
-  width: 27%;
-  min-height: 80vh;
-
   border-radius: 8px;
   margin-top: 11px;
-  padding: 3rem 1rem;
+  padding: .5rem 0;
   display: flex;
 
   align-items: center;
@@ -20,24 +14,17 @@
   flex-direction: column;
   text-align: center;
 
-  background-color: rgba(67, 69, 73, 0.199);;
-  border:1px solid rgb(67, 69, 73);
+  background-color: rgba(67, 69, 73, 0.288);
+  border-bottom: 2px solid #005fcc; 
+}
+.apresentation h2{
+  margin-bottom: 5px;
 }
 .apresentation p{
   font-size: .9rem;
 }
-.apresentation p:last-child{
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgb(67, 69, 73);
-}
-.apresentation img{
-  width: 80%;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 10px 0;
-}
 .cardsWrapper{
-  width: 70%;
+  width: 100%;
   margin-left: auto;
   padding: 0 1rem;
   display: flex;
@@ -93,4 +80,10 @@
 }
 .cardsWrapper .card .cardBody .redirect a:hover{
   background-position: 100% 50%;
+}
+
+@media(max-width:720px){
+  .wrapper{
+    padding: 2rem 3rem 2rem;
+  }
 }

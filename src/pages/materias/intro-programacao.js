@@ -9,6 +9,9 @@ export default function introProgramacao() {
     <Head>
       <title>Matéria - Introdução a Programação</title>
     </Head>
+    <div className="windowName">
+      <p>Introdução a Programação</p>
+    </div>
     <Cards />
   </Fragment>
   );

@@ -11,6 +11,9 @@ export default function Vetorial() {
       <Head>
         <title>Matéria - Cálculo Vetorial</title>
       </Head>
+      <div className="windowName">
+        <p>Cálculo Vetorial</p>
+      </div>
       <Cards />
     </Fragment>
   );
