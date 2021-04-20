@@ -44,7 +44,7 @@ export default function Materias() {
                 <img src="https://blog.explicae.com.br/wp-content/uploads/2019/05/f%C3%ADsica-estudo-dica-enem-800x500.png" alt=""/>
               </div>{/* IMAGE */}
               <div className={styles.descrip}>
-                <p>Cálculo I está sendo ministrado por Fred, um professor virado no giraia que confunde todos com seu geogebra.</p>
+                <p>Física I está sendo ministrado por Paulo Cesar, o professor dos cabelos brancos.</p>
               </div>{/* DESCRIP */}
               <div className={styles.redirect}>
                 <Link href="/materias/fisica">
@@ -64,7 +64,7 @@ export default function Materias() {
                 <img src="https://s3-sa-east-1.amazonaws.com/manual-do-enem-test/7cef79000baf422683c9fdf4489f31c3-C%C3%B3pia%20de%20Figura%209.JPG" alt=""/>
               </div>{/* IMAGE */}
               <div className={styles.descrip}>
-                <p>Cálculo I está sendo ministrado por Fred, um professor virado no giraia que confunde todos com seu geogebra.</p>
+                <p>Cálculo Vetorial está sendo ministrado por Valdeniza, a professora mais fofa da UFPB.</p>
               </div>{/* DESCRIP */}
               <div className={styles.redirect}>
                 <Link href="/materias/calculo-vetorial">
@@ -83,7 +83,7 @@ export default function Materias() {
                 <img src="https://computerworld.com.br/wp-content/uploads/2020/12/9-conte%C3%BAdos-para-quem-quer-se-familiarizar-com-a-%C3%A1rea-de-programa%C3%A7%C3%A3o-e-desenvolvimento.jpg" alt=""/>
               </div>{/* IMAGE */}
               <div className={styles.descrip}>
-                <p>Cálculo I está sendo ministrado por Fred, um professor virado no giraia que confunde todos com seu geogebra.</p>
+                <p>Introdução a Programação está sendo ministrado por Carlos(bidu), o DJ.</p>
               </div>{/* DESCRIP */}
               <div className={styles.redirect}>
                 <Link href="/materias/intro-programacao">
@@ -103,7 +103,7 @@ export default function Materias() {
                 <img src="https://static.vakinha.com.br/uploads/vakinha/image/340357/setup.jpg?ims=700x410" alt=""/>
               </div>{/* IMAGE */}
               <div className={styles.descrip}>
-                <p>Cálculo I está sendo ministrado por Fred, um professor virado no giraia que confunde todos com seu geogebra.</p>
+                <p>Introdução ao Computado está sendo ministrado por Hamilton, um dos melhores professores da instituição.</p>
               </div>{/* DESCRIP */}
               <div className={styles.redirect}>
                 <Link href="/materias/intro-computador">
