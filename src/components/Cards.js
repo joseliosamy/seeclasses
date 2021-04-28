@@ -139,7 +139,7 @@ export default function Cards() {
                 document.querySelector('.video').parentElement.removeChild(document.querySelector('.video'));
                 document.querySelector('.videoFull').insertAdjacentHTML('afterbegin', `
                   <div class="video">
-                    <iframe src="https://www.youtube.com/embed/${materia.calculo[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/${materia.calculo[i].card.theaterMode.iframe}?autoplay=1&&color=white" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                 `)
                 return
@@ -148,7 +148,7 @@ export default function Cards() {
                 divWindowName.insertAdjacentHTML('afterend', `
                   <div class="videoFull">
                     <div class="video">
-                      <iframe src="https://www.youtube.com/embed/${materia.calculo[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <iframe src="https://www.youtube.com/embed/${materia.calculo[i].card.theaterMode.iframe}?autoplay=1&&color=white" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                   </div>
                 `)
@@ -271,7 +271,7 @@ export default function Cards() {
                   document.querySelector('.video').parentElement.removeChild(document.querySelector('.video'));
                   document.querySelector('.videoFull').insertAdjacentHTML('afterbegin', `
                     <div class="video">
-                      <iframe src="https://www.youtube.com/embed/${materia.fisica[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <iframe src="https://www.youtube.com/embed/${materia.fisica[i].card.theaterMode.iframe}?autoplay=1&&color=white" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                   `)
                   return
@@ -280,7 +280,7 @@ export default function Cards() {
                   divWindowName.insertAdjacentHTML('afterend', `
                     <div class="videoFull">
                       <div class="video">
-                        <iframe src="https://www.youtube.com/embed/${materia.fisica[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/${materia.fisica[i].card.theaterMode.iframe}?autoplay=1&&color=white" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                       </div>
                     </div>
                   `)
@@ -403,7 +403,7 @@ export default function Cards() {
                   document.querySelector('.video').parentElement.removeChild(document.querySelector('.video'));
                   document.querySelector('.videoFull').insertAdjacentHTML('afterbegin', `
                     <div class="video">
-                      <iframe src="https://www.youtube.com/embed/${materia.vetorial[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <iframe src="https://www.youtube.com/embed/${materia.vetorial[i].card.theaterMode.iframe}?autoplay=1&&color=white" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                   `)
                   return
@@ -412,7 +412,7 @@ export default function Cards() {
                   divWindowName.insertAdjacentHTML('afterend', `
                     <div class="videoFull">
                       <div class="video">
-                        <iframe src="https://www.youtube.com/embed/${materia.vetorial[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/${materia.vetorial[i].card.theaterMode.iframe}?autoplay=1&&color=white" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                       </div>
                     </div>
                   `)
@@ -534,7 +534,7 @@ export default function Cards() {
                   document.querySelector('.video').parentElement.removeChild(document.querySelector('.video'));
                   document.querySelector('.videoFull').insertAdjacentHTML('afterbegin', `
                     <div class="video">
-                      <iframe src="https://www.youtube.com/embed/${materia.introProg[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <iframe src="https://www.youtube.com/embed/${materia.introProg[i].card.theaterMode.iframe}?autoplay=1&&color=white" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                   `)
                   return
@@ -543,7 +543,7 @@ export default function Cards() {
                   divWindowName.insertAdjacentHTML('afterend', `
                     <div class="videoFull">
                       <div class="video">
-                        <iframe src="https://www.youtube.com/embed/${materia.introProg[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/${materia.introProg[i].card.theaterMode.iframe}?autoplay=1&&color=white" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                       </div>
                     </div>
                   `)
@@ -665,7 +665,7 @@ export default function Cards() {
                   document.querySelector('.video').parentElement.removeChild(document.querySelector('.video'));
                   document.querySelector('.videoFull').insertAdjacentHTML('afterbegin', `
                     <div class="video">
-                      <iframe src="https://www.youtube.com/embed/${materia.introComp[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <iframe src="https://www.youtube.com/embed/${materia.introComp[i].card.theaterMode.iframe}?autoplay=1&&color=white" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                   `)
                   return
@@ -674,7 +674,7 @@ export default function Cards() {
                   divWindowName.insertAdjacentHTML('afterend', `
                     <div class="videoFull">
                       <div class="video">
-                        <iframe src="https://www.youtube.com/embed/${materia.introComp[i].card.theaterMode.iframe}?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/${materia.introComp[i].card.theaterMode.iframe}?autoplay=1&&color=white" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                       </div>
                     </div>
                   `)
