@@ -577,7 +577,7 @@ export default function Cards() {
 
             <div class="cardBody">
               <div class="descrip">
-                <p>${materia.introComp[i].card.cardHeader.title.substring(0, materia.introComp[i].card.cardHeader.title.length - 8)}</p>
+                <p>${materia.introComp[i].card.cardHeader.title}</p>
                 <p>Descrição em breve.</p>
               </div>
               <div class="bar">
