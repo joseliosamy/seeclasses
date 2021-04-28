@@ -50,7 +50,7 @@ export default function Cards() {
 
               <div class="cardBody">
                 <div class="descrip">
-                  <p>${materia.calculo[i].card.cardHeader.title.substring(0, materia.calculo[i].card.cardHeader.title.length - 8)}</p>
+                  <p>${materia.calculo[i].card.cardHeader.title}</p>
                 <p>Descrição em breve.</p>
               </div>
               <div class="bar">
@@ -183,7 +183,7 @@ export default function Cards() {
 
             <div class="cardBody">
               <div class="descrip">
-                <p>${materia.fisica[i].card.cardHeader.title.substring(0, materia.fisica[i].card.cardHeader.title.length - 8)}</p>
+                <p>${materia.fisica[i].card.cardHeader.title}</p>
                 <p>Descrição em breve.</p>
               </div>
               <div class="bar">
@@ -315,7 +315,7 @@ export default function Cards() {
 
             <div class="cardBody">
               <div class="descrip">
-                <p>${materia.vetorial[i].card.cardHeader.title.substring(0, materia.vetorial[i].card.cardHeader.title.length - 8)}</p>
+                <p>${materia.vetorial[i].card.cardHeader.title}</p>
                 <p>Descrição em breve.</p>
               </div>
               <div class="bar">
@@ -446,7 +446,7 @@ export default function Cards() {
 
             <div class="cardBody">
               <div class="descrip">
-                <p>${materia.introProg[i].card.cardHeader.title.substring(0, materia.introProg[i].card.cardHeader.title.length - 8)}</p>
+                <p>${materia.introProg[i].card.cardHeader.title}</p>
                 <p>Descrição em breve.</p>
               </div>
               <div class="bar">
