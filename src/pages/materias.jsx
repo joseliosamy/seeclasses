@@ -2,15 +2,16 @@
 
 import Link from 'next/link';
 import { Fragment } from 'react';
+import Head from 'next/head';
 import styles from '../styles/pages/Materias.module.css'
 
 export default function Materias() {
   return (
 
     <Fragment>
-      <head>
+      <Head>
         <title>Matérias</title>
-      </head>
+      </Head>
       <div className={styles.wrapper}>
       <div className={styles.apresentation}>
         <h2>Bem vindo ao See Classes!</h2>
