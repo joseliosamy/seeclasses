@@ -4,6 +4,7 @@
   min-height: calc(100vh - 60px);
 }
 .apresentation{
+  
   border-radius: 8px;
   margin-top: 11px;
   padding: .5rem 0;
@@ -28,7 +29,7 @@
   margin-left: auto;
   padding: 0 1rem;
   display: flex;
-  align-items: center;
+
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -48,6 +49,8 @@
 }
 .cardsWrapper .card .cardBody{
   width: 100%;
+  height: 100%;
+
 }
 .cardsWrapper .card .cardBody .image{
   width: 100%;

@@ -8,6 +8,9 @@ export default function Materias() {
   return (
 
     <Fragment>
+      <head>
+        <title>Matérias</title>
+      </head>
       <div className={styles.wrapper}>
       <div className={styles.apresentation}>
         <h2>Bem vindo ao See Classes!</h2>
