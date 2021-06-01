@@ -110,6 +110,7 @@ a {
 .videoFull{
     width: 100%;
     height: calc(100vh - 60px);
+    overflow: hidden;
 }
 .videoFull .video{
     width: 100%;
@@ -117,6 +118,7 @@ a {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    animation: in 700ms ease-in-out;
 }
 .videoFull .video iframe{
     width: 100%;
@@ -125,6 +127,9 @@ a {
     border-radius: 8px;
     border: 0;
     margin: 2rem 15px 0 15px;
+}
+.videoFull .video a{
+    display: none;
 }
 .card {
     width: 210px;
@@ -231,14 +236,65 @@ a {
     /*Mobile*/
     .cardsWrapper {
         padding: 1rem;
+        overflow: hidden;
     }
     .videoFull{
         height: 60vh;
+        overflow: visible;
     }
     .videoFull .video{
+        flex-direction: column;
         align-items: center;
+        width: 90%;
+        margin: 0 auto;
     }
     .videoFull .video iframe{
         height: 300px;
+    }
+    .videoFull .video a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 40px;
+        margin: 15px auto 0;
+        border-radius: 8px;
+        background: linear-gradient(90deg, #005fcc 0%, #007acc 100%);
+    }
+    .videoFull .video a svg{
+        width: 38px;
+        height: 22px;
+        border: 1px solid wheat;
+        border-radius: 7px;
+        margin-right: 5px;
+    }
+}
+@media(max-width: 400px){
+    .videoFull{
+        height: 45vh;
+    }
+    .cardsWrapper .card{
+        width: 90%;
+    }
+    .videoFull .video iframe{
+        height: 210px;
+    }
+    .cardHeader{
+        height: 180px;
+    }
+}
+
+@keyframes in{
+    0%{
+        transform: scale(0.8,0.8);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1.1,1.1);
+        opacity: .8;
+    }
+    100%{
+        transform: scale(1,1);
+        opacity: 1;
     }
 }
