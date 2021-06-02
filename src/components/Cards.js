@@ -23,7 +23,7 @@ export default function Cards() {
     //CONSEGUINDO O NOME DA MATERIA VIA GET
     const convertPath = ()=>{
       let pathname = window.location.pathname;
-      return pathname = pathname.substring(9);
+      return pathname.substring(9);
     }
     const matter = convertPath()
 

@@ -269,18 +269,19 @@ a {
         margin-right: 5px;
     }
 }
-@media(max-width: 400px){
+@media(max-width: 460px){
     .videoFull{
         height: 45vh;
     }
     .cardsWrapper .card{
-        width: 90%;
+        width: 80%;
     }
     .videoFull .video iframe{
         height: 210px;
     }
     .cardHeader{
-        height: 180px;
+        width: 100%;
+        height: 190px;
     }
 }
 

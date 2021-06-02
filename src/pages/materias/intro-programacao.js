@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Fragment } from "react";
 import Cards from "../../components/Cards";
+import ScrollTop from "../../components/ScrollTop";
 
 
 export default function introProgramacao() {
@@ -12,6 +13,7 @@ export default function introProgramacao() {
     <div className="windowName">
       <p>Introdução a Programação</p>
     </div>
+    <ScrollTop />
     <Cards />
   </Fragment>
   );

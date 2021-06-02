@@ -3,6 +3,7 @@
 import Head from "next/head";
 import { Fragment } from "react";
 import Cards from "../../components/Cards";
+import ScrollTop from "../../components/ScrollTop";
 
 
 export default function Vetorial() {
@@ -14,6 +15,7 @@ export default function Vetorial() {
       <div className="windowName">
         <p>Cálculo Vetorial</p>
       </div>
+      <ScrollTop />
       <Cards />
     </Fragment>
   );
