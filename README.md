@@ -12,7 +12,7 @@
   <p align="center">
     Todas aulas da turma 20.2 centralizadas em um único lugar.
     <br />
-    <a href="https://google.com"><strong>Explore »</strong></a>
+    <a href="https://seeclasses.vercel.app/materias"><strong>Explore »</strong></a>
     <br />
     <br />
     <a href="https://seeclasses.vercel.app/">Acessar</a>
