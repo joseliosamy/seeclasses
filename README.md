@@ -3,8 +3,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="public/images/seeclasses.png" alt="Logo" width="80" height="80">
+  <a href="https://seeclasses.vercel.app/" target="_blank">
+    <img src="public/images/seeclasses.png" alt="Logo" width="100%" height="100%">
   </a>
 
   <h3 align="center">SeeClasses</h3>
