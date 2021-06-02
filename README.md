@@ -15,11 +15,11 @@
     <a href="https://google.com"><strong>Explore »</strong></a>
     <br />
     <br />
-    <a href="">Acessar</a>
+    <a href="https://seeclasses.vercel.app/">Acessar</a>
     ·
-    <a href="https://issues.com">Reportar Bug</a>
+    <a href="https://github.com/joseliosamy/seeclasses/issues/new">Reportar Bug</a>
     ·
-    <a href="https://issues.com">Pedir Melhoria</a>
+    <a href="https://github.com/joseliosamy/seeclasses/issues/new">Pedir Melhoria</a>
   </p>
 </p>
 
