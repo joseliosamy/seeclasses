@@ -1,8 +1,11 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import styles from '../styles/components/ScrollTop.module.css';
 
 
 export default function ScrollTop(){
+  useEffect(()=>{
+    
+  })
   return(
     <Fragment>
       <button className={styles.box}>
