@@ -29,8 +29,10 @@
     -webkit-transition: 200ms;
     -o-transition: 200ms;
     transition: 200ms;
+    color: var(--schemma-blue);
 }
 
 .footer .icon:hover {
-    color: #0092f3;
+    color: var(--schemma-blue-weak);
+    transform: scale(1.1,1.1);
 }

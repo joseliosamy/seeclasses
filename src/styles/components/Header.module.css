@@ -20,11 +20,12 @@
 .title svg.headerSvg{
   width: 35px;
   height: 35px;
-  fill: var(--text);
+  /* fill: var(--text); */
+  fill: #ffffff;
   transition: 100ms;
 }
 .title:hover svg.headerSvg{
-  fill: var(--text-weak);
+  fill: var(--schemma-blue-weak);
 }
 .nav{
   width: 100%;
@@ -53,10 +54,14 @@
   position: absolute;
   top: 43px;
 
-  background-color: #29323f;
+  /* background-color: #29323f; */
+  background-color: #fff;
+  
+  color: var(--schemma-blue);
 
   font-size: .9rem;
   text-align: center;
+  font-weight: 500;
   border-radius: 5px;
   transition: 80ms ease-in-out;
 }
@@ -66,9 +71,9 @@
 .anchor a .headerSvg{
   width: 25px;
   height: 25px;
-  fill: var(--text-weak);
+  fill: #fff;
   transition: 100ms;
 }
 .anchor a:hover .headerSvg{
-  fill: var(--text);
+  fill: var(--schemma-blue-weak);
 }

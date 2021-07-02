@@ -20,10 +20,10 @@ export default function Cards() {
     let output = "";
     var materia = items[0];
 
+
     //CONSEGUINDO O NOME DA MATERIA VIA GET
     const convertPath = ()=>{
-      let pathname = window.location.pathname;
-      return pathname.substring(9);
+      let pathname = window.location.pathname.substring(9);
     }
     const matter = convertPath()
 

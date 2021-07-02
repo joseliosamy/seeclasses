@@ -6,8 +6,8 @@
   right: 30px;
   bottom: 10px;
   background-color: transparent;
-  border-left: 3px solid #005fcc;
-  border-right: 3px solid #005fcc;
+  border-left: 3px solid var(--schemma-blue);
+  border-right: 3px solid var(--schemma-blue);
   border-top: 0;
   border-bottom: 0;
   border-radius: 8px;
@@ -15,7 +15,7 @@
   transition: transform 50ms ease-in, box-shadow 150ms;
 }
 .box:hover{
-  box-shadow: 0 0 5px #005fcc;
+  box-shadow: 0 0 5px var(--schemma-blue) ;
 }
 .box:active{
   transform: scale(0.8,0.8);
