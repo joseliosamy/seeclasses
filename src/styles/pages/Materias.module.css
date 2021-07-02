@@ -15,8 +15,8 @@
   flex-direction: column;
   text-align: center;
 
-  background-color: rgba(67, 69, 73, 0.288);
-  border-bottom: 2px solid #005fcc; 
+  background-color: rgba(31, 138, 84, 0.055);
+  border-bottom: 2px solid var(--schemma-blue); 
 }
 .apresentation h2{
   margin-bottom: 5px;
@@ -36,13 +36,16 @@
 .cardsWrapper .card{
   width: 250px;
   min-height: 320px;
-  background-color: rgba(67, 69, 73, 0.753);
+  background-color: rgba(31, 138, 84, 0.055);
   border-radius: 8px;
   margin: 10px;
 }
 .cardsWrapper .card .cardHeader{
   text-align: center;
-  padding: 20px 0;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cardsWrapper .card .cardHeader h2{
   font-weight: 500;
@@ -62,7 +65,9 @@
   object-fit: cover;
 }
 .cardsWrapper .card .cardBody .descrip{
-  padding: 15px 10px 25px 10px;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
   text-align: center;
   font-size: .9rem;
 }
@@ -75,7 +80,7 @@
 }
 .cardsWrapper .card .cardBody .redirect a{
   padding: 10px 50px;
-  background-image: linear-gradient(300deg, #046ce2, #0092f3, #005fcc);
+  background-image: linear-gradient(300deg, var(--schemma-blue), var(--schemma-blue-weak), var(--schemma-blue));
   background-size: 200% 200%;
   transition: .6s;
   border-radius: 8px;
