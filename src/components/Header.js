@@ -1,6 +1,7 @@
 
 import Link from 'next/link';
 import styles from '../styles/components/Header.module.css';
+import DarkmodeButton from '../components/DarkmodeButton';
 
 export default function Header() {
   function removeVideo(){
@@ -239,6 +240,8 @@ export default function Header() {
           </Link>
           <p>Introdução ao Computador</p>
         </div>
+
+        <DarkmodeButton />
       </nav> {/* nav */}
     </header> // header
   );

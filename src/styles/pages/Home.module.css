@@ -31,7 +31,7 @@
 .apresentation .banner .fade a{
   padding: 20px 50px;
   border-radius: 12px;
-  background-image: linear-gradient(50deg, var(--schemma-blue), var(--schemma-blue-weak), var(--schemma-blue));
+  background-image: linear-gradient(50deg, var(--schemma-light), var(--schemma-light-weak), var(--schemma-light));
   background-size: 200% 200%;
   transition: .6s;
   color: #fff;

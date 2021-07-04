@@ -7,6 +7,7 @@ import NProgress from 'nprogress';
 import Router from 'next/router';
 import Footer from '../components/Footer';
 
+
 NProgress.configure({
   parent: '#__next',
   showSpinner: false,
@@ -24,7 +25,6 @@ Router.events.on("routeChangeError", (url)=> {
 })
 
 
-
 function MyApp({ Component, pageProps }) {
   return (
     <div className="container">
@@ -34,7 +34,8 @@ function MyApp({ Component, pageProps }) {
       </main> 
       <Footer />
     </div>
-  );
-}
 
+  );
+  
+}
 export default MyApp
