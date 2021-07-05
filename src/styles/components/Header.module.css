@@ -1,6 +1,6 @@
 
 .header{
-  background: var(--background-weak);
+  background: var(--schemma);
   width: 100%;
   height: 60px;
   position: relative;
@@ -25,7 +25,7 @@
   transition: 100ms;
 }
 .title:hover svg.headerSvg{
-  fill: var(--schemma-light-weak);
+  fill: var(--schemma-weak);
 }
 .nav{
   width: 100%;
@@ -57,7 +57,7 @@
   /* background-color: #29323f; */
   background-color: #fff;
   
-  color: var(--schemma-light);
+  color: var(--schemma);
 
   font-size: .9rem;
   text-align: center;
@@ -75,5 +75,5 @@
   transition: 100ms;
 }
 .anchor a:hover .headerSvg{
-  fill: var(--schemma-light-weak);
+  fill: var(--schemma-weak);
 }

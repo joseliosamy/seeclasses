@@ -6,7 +6,6 @@
 .apresentation .banner{
     width: 100%;
     height: 400px;
-    background-image: url(../../../public/images/banner.jpg); 
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -14,9 +13,9 @@
 .apresentation .banner .fade{
   width: 100%;
   height: 100%;
-  background: linear-gradient(360deg, var(--background) 0%, #f5f5f5e5 20%, #f5f5f500 100%);
+  background: linear-gradient(360deg, var(--schemma-fade) 0%, #f5f5f5e5 20%, #f5f5f500 100%);
   display: flex;
-  align-items: center;
+  align-items: center;  
   justify-content: center;
   flex-direction: column;
 }
@@ -31,7 +30,7 @@
 .apresentation .banner .fade a{
   padding: 20px 50px;
   border-radius: 12px;
-  background-image: linear-gradient(50deg, var(--schemma-light), var(--schemma-light-weak), var(--schemma-light));
+  background-image: linear-gradient(50deg, var(--schemma), var(--schemma-weak), var(--schemma));
   background-size: 200% 200%;
   transition: .6s;
   color: #fff;

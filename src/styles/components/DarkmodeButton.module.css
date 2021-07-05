@@ -1,3 +1,41 @@
 
 
 
+.toggleMode{
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+}
+.toggleMode span{
+  margin-right: 5px;
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--objects);
+}
+.inputToggle{
+  width: 40px;
+  height: 20px;
+  position: relative;
+  outline: none;
+  border-radius: 20px;
+  -webkit-appearance: none;
+  background-color: var(--objects);
+  box-shadow: inset 0 0 3px #00000033;
+  transition: .4s;
+}
+.inputToggle::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  transform: scale(0.8,0.8);
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px #00000033;
+  background-color: var(--schemma);
+  transition: .3s ease-out;
+}
+.inputToggle:checked::before{
+  left: 20px;
+}
