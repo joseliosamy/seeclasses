@@ -42,13 +42,13 @@ export default function DarkmodeButton(){
     if(cookieMode == 0){
       setCookie('theme', 1);
       toggleMode();
-      console.log(cookieMode);
+      // console.log(cookieMode);
     }
     //Aplicando o valor do tema light=1
     else if(cookieMode == 1){
       setCookie('theme', 0);
       toggleMode();
-      console.log(cookieMode);
+      // console.log(cookieMode);
     } 
     return
   }
@@ -83,9 +83,9 @@ export default function DarkmodeButton(){
       if(!document.querySelector(".Home_banner__2xk5c")) return
 
       //Banner dark
-      document.querySelector(".Home_banner__2xk5c").style = 'background-image: url(_next/static/media/banner1.509423794d109f57be82d09bf01f28c9.jpg)'
+      document.querySelector(".Home_banner__2xk5c").style = 'background-image: url(https://raw.githubusercontent.com/joseliosamy/seeclasses/master/public/images/banner1.jpg)'
       
-      console.log('executado')
+      // console.log('executado')
     }   
 
     // ------------------------------------------------------------------------
@@ -114,7 +114,7 @@ export default function DarkmodeButton(){
       if(!document.querySelector(".Home_banner__2xk5c")) return
 
       //Banner light
-      document.querySelector(".Home_banner__2xk5c").style = 'background-image: url(_next/static/media/banner.87a8188b70493f64b601dba4bd152e7b.svg)'
+      document.querySelector(".Home_banner__2xk5c").style = 'background-image: url(https://raw.githubusercontent.com/joseliosamy/seeclasses/4506a52360021bb2c541c27cf3ab0f25a0c9ca8c/public/images/banner.svg)'
       
       //Evitar que o banner já setado seja setado novamente
       if(cookieMode == 0) return
@@ -125,10 +125,10 @@ export default function DarkmodeButton(){
     if(url == '/'){
       //Banner dark
       if( getCookie('theme') == 1 ){
-        document.querySelector(".Home_banner__2xk5c").style = 'background-image: url(_next/static/media/banner1.509423794d109f57be82d09bf01f28c9.jpg)'
+        document.querySelector(".Home_banner__2xk5c").style = 'background-image: url(https://raw.githubusercontent.com/joseliosamy/seeclasses/master/public/images/banner1.jpg)'
       }
       else if( getCookie('theme') == 0 ){
-        document.querySelector(".Home_banner__2xk5c").style = 'background-image: url(_next/static/media/banner.87a8188b70493f64b601dba4bd152e7b.svg)'
+        document.querySelector(".Home_banner__2xk5c").style = 'background-image: url(https://raw.githubusercontent.com/joseliosamy/seeclasses/4506a52360021bb2c541c27cf3ab0f25a0c9ca8c/public/images/banner.svg)'
       }
     }
   })
