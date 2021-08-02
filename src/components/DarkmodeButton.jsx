@@ -1,6 +1,7 @@
 
 
-
+import React, { useState, useEffect } from 'react'
+import Router from 'next/router';
 import styles from '../styles/components/DarkmodeButton.module.css';
 
 
@@ -15,88 +16,125 @@ export default function DarkmodeButton(){
     document.cookie = name+"="+value+"; expires="+expires+"; path=/";
   }
 
+  //Função para obter o valor do cookie
+  function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+  
   //Funcao que aplica o modo com a acão do clique no checkbox
   function setModeButton(){
     //Variavel que contem o valor do relativo ao tema, 1=dark, 0=light
-    const cookieMode = document.cookie.substring(6);
+    const cookieMode = getCookie("theme")
 
     //Aplicando o valor do tema dark=1
     if(cookieMode == 0){
       setCookie('theme', 1);
-      console.log(cookieMode);
       toggleMode();
+      console.log(cookieMode);
     }
     //Aplicando o valor do tema light=1
     else if(cookieMode == 1){
       setCookie('theme', 0);
-      console.log(cookieMode);
       toggleMode();
+      console.log(cookieMode);
     } 
     return
   }
-  
-  //Funcao que lê o cookie e aplica o tema relativo ao valor de cookieModeState
-  async function getModeExec(){
-    if(document.cookie.substring(6) == 0 || document.cookie.substring(6) == 1){
-      toggleMode();
-    }
-    return
-  }
-  getModeExec();
+
   
   //Funcao que modifica as cores das variáveis do sistema de acordo com o cookie 'theme'
   function toggleMode(){
-    const cookieMode = document.cookie.substring(6);
+    const cookieMode = getCookie('theme')
     const styleBody = document.body.style;
-
+    
     //DARK
     if(cookieMode == 1){
+      //Text
+      styleBody.setProperty('--text', '#d8d8d8');
       //Schemma
       styleBody.setProperty('--schemma', '#0d1117');
       //Schemma-weak
-      styleBody.setProperty('--schemma-weak', '#161b22');
+      styleBody.setProperty('--schemma-weak', '#0d1117');
       //Schemma-fade
-      styleBody.setProperty('--schemma-fade', '#0d1117');
-      document.querySelector(".Home_fade__3NAki").style.setProperty('background','linear-gradient(360deg, var(--schemma-fade) 0%, rgba(13, 17, 23, 0.897) 20%, rgba(34,153,221,0) 100%)');
+      styleBody.setProperty('--schemma-fade', '#161b22');
+      //Schemma-fade-1
+      styleBody.setProperty('--schemma-fade-1', '#161b22e5');
+      //Schemma-fade-2
+      styleBody.setProperty('--schemma-fade-2', '#2299dd01');
       //Background
-      styleBody.setProperty('--background', '#0d1117');
-
+      styleBody.setProperty('--background', '#161b22');
       //Checkbox true
       document.querySelector('.DarkmodeButton_inputToggle__1Zuq_').checked = true;
 
       //Tratando o erro do banner, estava dando choque na troca de página
-      if(!document.querySelector(".Home_banner__2xk5c")) return
-      //Banner dark
-      document.querySelector(".Home_banner__2xk5c").style = 'background-image: url(https://github.com/joseliosamy/seeclasses/blob/master/public/images/banner1.jpg?raw=true)'
 
-      return
+      if(!document.querySelector(".Home_banner__2xk5c")) return
+
+      //Banner dark
+      document.querySelector(".Home_banner__2xk5c").style = 'background-image: url(_next/static/media/banner1.509423794d109f57be82d09bf01f28c9.jpg)'
+      
+      console.log('executado')
     }   
+
+    // ------------------------------------------------------------------------
+
     //LIGHT
     if(cookieMode == 0){
+      //Text
+      styleBody.setProperty('--text', '#4e4e4e');
       //Schemma
-      styleBody.setProperty('--schemma', '#02ff6c');
+      styleBody.setProperty('--schemma', '#2e75e0');
       //Schemma-weak
-      styleBody.setProperty('--schemma-weak', '#55e08a');
-      //Schemma-fade
-      styleBody.setProperty('--schemma-fade', '#fff');
-      document.querySelector(".Home_fade__3NAki").style.setProperty('background','linear-gradient(360deg, var(--schemma-fade) 0%, #f5f5f5e5 20%, #f5f5f500 100%)');
+      styleBody.setProperty('--schemma-weak', '#30a9f0');
+      //Schemma-fade-1
+      styleBody.setProperty('--schemma-fade', '#f3f3f3');
+      //Schemma-fade-1
+      styleBody.setProperty('--schemma-fade-1', '#f5f5f5e5');
+      //Schemma-fade-2
+      styleBody.setProperty('--schemma-fade-2', '#f8f8f800');
       //Background
-      styleBody.setProperty('--background', '#fff');
+      styleBody.setProperty('--background', '#f3f3f3');
       //Checkbox false
       document.querySelector('.DarkmodeButton_inputToggle__1Zuq_').checked = false;
 
+      
       //Tratando o erro do banner, estava dando choque na troca de página
       if(!document.querySelector(".Home_banner__2xk5c")) return
 
+      //Banner light
+      document.querySelector(".Home_banner__2xk5c").style = 'background-image: url(_next/static/media/banner.87a8188b70493f64b601dba4bd152e7b.svg)'
+      
       //Evitar que o banner já setado seja setado novamente
       if(cookieMode == 0) return
-      //Banner light
-      document.querySelector(".Home_banner__2xk5c").style = 'background-image: url(https://github.com/joseliosamy/seeclasses/blob/master/public/images/banner.jpg?raw=true)'
 
-      return
     }
   }
-
+  Router.events.on("routeChangeComplete", (url)=> {
+    if(url == '/'){
+      //Banner dark
+      if( getCookie('theme') == 1 ){
+        document.querySelector(".Home_banner__2xk5c").style = 'background-image: url(_next/static/media/banner1.509423794d109f57be82d09bf01f28c9.jpg)'
+      }
+      else if( getCookie('theme') == 0 ){
+        document.querySelector(".Home_banner__2xk5c").style = 'background-image: url(_next/static/media/banner.87a8188b70493f64b601dba4bd152e7b.svg)'
+      }
+    }
+  })
+  
+  useEffect(toggleMode, []);
+  
   return (
     <div className={styles.toggleMode}>
       <span>Mode</span>

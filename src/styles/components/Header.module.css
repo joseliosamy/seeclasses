@@ -4,6 +4,7 @@
   width: 100%;
   height: 60px;
   position: relative;
+  top: 0;
 }
 .title{
   position: absolute;
@@ -26,6 +27,9 @@
 }
 .title:hover svg.headerSvg{
   fill: var(--schemma-weak);
+}
+.menu{
+  display: none;
 }
 .nav{
   width: 100%;
@@ -76,4 +80,60 @@
 }
 .anchor a:hover .headerSvg{
   fill: var(--schemma-weak);
+}
+
+@media(max-width: 460px){
+  .header{
+    top: 0;
+    position: fixed;
+  }
+  .menu{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,50%);
+  }
+  .menu a{
+    cursor: pointer;
+    padding: 0 10px;
+    transition: 500ms;
+  }
+  .menu a svg{
+    fill: #fff;
+  }
+  .nav{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--schemma);
+    position: fixed;
+    top: -700px;
+    display: flex;
+    opacity: 0;
+    justify-content: initial;
+    flex-direction: column;
+    transition: 500ms;
+  }
+  .nav .anchor{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content:center;
+    margin: 10px;
+  }
+  .nav .anchor a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav .anchor p{
+    background: none;
+    position: initial;
+    opacity: 1;
+    color: var(--text);
+  }
 }
