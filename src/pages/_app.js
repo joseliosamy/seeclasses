@@ -4,6 +4,7 @@ import '../styles/nprogress.css'
 // import '../styles/components/cards.css';
 import Header from '../components/Header';
 import NProgress from 'nprogress';
+import Head from 'next/head';
 import Router from 'next/router';
 import Footer from '../components/Footer';
 
@@ -23,7 +24,6 @@ Router.events.on("routeChangeComplete", (url)=> {
 Router.events.on("routeChangeError", (url)=> {
   NProgress.done();
 })
-
 
 function MyApp({ Component, pageProps }) {
   return (

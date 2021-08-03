@@ -29,7 +29,7 @@
     -webkit-transition: 200ms;
     -o-transition: 200ms;
     transition: 200ms;
-    color: var(--schemma);
+    color: var(--objects-2);
 }
 
 .footer .icon:hover {

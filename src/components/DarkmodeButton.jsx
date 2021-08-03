@@ -63,6 +63,8 @@ export default function DarkmodeButton(){
     if(cookieMode == 1){
       //Text
       styleBody.setProperty('--text', '#d8d8d8');
+      //Objects
+      styleBody.setProperty('--objects-2', '#fff');
       //Schemma
       styleBody.setProperty('--schemma', '#0d1117');
       //Schemma-weak
@@ -94,6 +96,8 @@ export default function DarkmodeButton(){
     if(cookieMode == 0){
       //Text
       styleBody.setProperty('--text', '#4e4e4e');
+      //Objects
+      styleBody.setProperty('--objects-2', '#2e75e0');
       //Schemma
       styleBody.setProperty('--schemma', '#2e75e0');
       //Schemma-weak

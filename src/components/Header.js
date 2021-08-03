@@ -13,7 +13,7 @@ export default function Header() {
     const navAall = document.querySelectorAll(".Header_anchor__x39-4 a")
 
     if(window.innerWidth <= 460){
-      if(nav.style.top == ''||nav.style.top == '-700px'){
+      if(nav.style.top == ''||nav.style.top == '-100%'){
         menuA.style.transform = 'rotate(180deg)'
         nav.style.top = '60px'
         nav.style.opacity = '1'
@@ -21,7 +21,7 @@ export default function Header() {
       }
       else if(nav.style.top == '60px'){
         menuA.style.transform = 'rotate(0)'
-        nav.style.top = '-700px'
+        nav.style.top = '-100%'
         nav.style.opacity = '.5'
       }
     }else{
@@ -43,10 +43,11 @@ export default function Header() {
     if(window.innerWidth <= 460){
       if(nav.style.top == '60px'){
         menuA.style.transform = 'rotate(0deg)'
-        nav.style.top = '-700px'
+        nav.style.top = '-100%'
         nav.style.opacity = '.5'
       }
-    }else{
+    }else if(window.innerWidth >= 460){
+      nav.style.opacity = '1'
       return
     }
   }

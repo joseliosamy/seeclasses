@@ -46,9 +46,11 @@
     --schemma-dark-weak: #161b22; */
     
     --objects: #fff;
+    --objects-2: #fff;
     --line: #c9d1d980;
     /* --text: #4e4e4e; */
     --text: #4e4e4e;
+    --text-2: #fff;
     --text-weak: #8b949e;
 }
 
@@ -170,7 +172,7 @@ a {
     transition: 300ms;
 
     /* box-shadow: 0 0 15px #0e0e0e; */
-    box-shadow: 0 0 0px #0e0e0e;
+    box-shadow: 0 0 2px #808080d3;
 
     margin: 15px;
 }

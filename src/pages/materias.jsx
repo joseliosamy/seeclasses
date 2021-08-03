@@ -78,6 +78,27 @@ export default function Materias() {
             </div>{/* CARDBODY */}
           </div>{/* CARD CALCULO VETORIAL ------------------ */}
 
+
+          <div className={styles.card}>
+            <div className={styles.cardHeader}>
+              <h2>Introdução ao Computador</h2>
+            </div>{/* CARDHEADER */}
+            <div className={styles.cardBody}>
+              <div className={styles.image}>
+                <img src="https://static.vakinha.com.br/uploads/vakinha/image/340357/setup.jpg?ims=700x410" alt=""/>
+              </div>{/* IMAGE */}
+              <div className={styles.descrip}>
+                <p>Introdução ao Computado está sendo ministrado por Hamilton, um dos melhores professores da instituição.</p>
+              </div>{/* DESCRIP */}
+              <div className={styles.redirect}>
+                <Link href="/materias/intro-computador">
+                  <a>Aulas</a>
+                </Link>
+              </div>{/* REDIRECT */}
+            </div>{/* CARDBODY */}
+          </div>{/* INTRODUÇÃO AO COMPUTADOR ------------------ */}
+
+
           <div className={styles.card}>
             <div className={styles.cardHeader}>
               <h2>Introdução a Programação</h2>
@@ -100,22 +121,42 @@ export default function Materias() {
 
           <div className={styles.card}>
             <div className={styles.cardHeader}>
-              <h2>Introdução ao Computador</h2>
+              <h2>Linguagem de Programação 1</h2>
             </div>{/* CARDHEADER */}
             <div className={styles.cardBody}>
               <div className={styles.image}>
-                <img src="https://static.vakinha.com.br/uploads/vakinha/image/340357/setup.jpg?ims=700x410" alt=""/>
+                <img src="https://th.bing.com/th/id/OIP.C9vJh79XyZNnNgNyz9mRLgHaEK?pid=ImgDet&rs=1" alt=""/>
               </div>{/* IMAGE */}
               <div className={styles.descrip}>
-                <p>Introdução ao Computado está sendo ministrado por Hamilton, um dos melhores professores da instituição.</p>
+                <p>Linguagem de Programação 1 está sendo ministrado por Alan.</p>
               </div>{/* DESCRIP */}
               <div className={styles.redirect}>
-                <Link href="/materias/intro-computador">
+                <Link href="/materias/linguagem-programacao-1">
                   <a>Aulas</a>
                 </Link>
               </div>{/* REDIRECT */}
             </div>{/* CARDBODY */}
-          </div>{/* INTRODUÇÃO AO COMPUTADOR ------------------ */}
+          </div>{/* LINGUAGEM A PROGRAMAÇÃO ------------------ */}
+
+
+          <div className={styles.card}>
+            <div className={styles.cardHeader}>
+              <h2>Lógica de Programação</h2>
+            </div>{/* CARDHEADER */}
+            <div className={styles.cardBody}>
+              <div className={styles.image}>
+                <img src="https://static0.makeuseofimages.com/wordpress/wp-content/uploads/2018/03/brain-programming.jpg" alt=""/>
+              </div>{/* IMAGE */}
+              <div className={styles.descrip}>
+                <p>Lógica de Programação está sendo ministrado por Tatiana.</p>
+              </div>{/* DESCRIP */}
+              <div className={styles.redirect}>
+                <Link href="/materias/logica-programacao">
+                  <a>Aulas</a>
+                </Link>
+              </div>{/* REDIRECT */}
+            </div>{/* CARDBODY */}
+          </div>{/* LÓGICA DE PROGRAMAÇÃO ------------------ */}
 
         </div>{/* CARDSWRAPPER */}
       </div>

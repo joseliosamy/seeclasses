@@ -38,6 +38,7 @@
   background-color: rgba(31, 138, 84, 0.055);
   border-radius: 8px;
   margin: 10px;
+  box-shadow: 0 0 3px #808080d3;
 }
 .cardsWrapper .card .cardHeader{
   text-align: center;
@@ -80,7 +81,7 @@
 .cardsWrapper .card .cardBody .redirect a{
   padding: 10px 50px;
   background-image: linear-gradient(300deg, var(--schemma), var(--schemma-weak), var(--schemma));
-  color: var(--text);
+  color: var(--text-2);
   background-size: 200% 200%;
   transition: .6s;
   border-radius: 8px;
