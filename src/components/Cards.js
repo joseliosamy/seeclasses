@@ -125,7 +125,7 @@ export default function Cards() {
     setTimeout(() => {
       const openVideo = document.querySelectorAll('.see p');
       const divWindowName =  document.querySelector('.windowName');
-      const videoFull = document.querySelector('.videoFull');
+
     
       openVideo.forEach(e => {
         e.addEventListener('click', ()=>{
@@ -198,7 +198,7 @@ export default function Cards() {
               <div class="bar">
                 <div class="info">
                   <p>${materia.fisica[i].card.cardBody.date.substring(0,5)}</p> 
-                  <p>Paulo Cesar</p>
+                  <p>Doug</p>
                 </div>
                 <div class="see">
                   <p data-id="${i + 1}">       

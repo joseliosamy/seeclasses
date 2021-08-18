@@ -48,7 +48,7 @@ export default function Materias() {
                 <img src="https://blog.explicae.com.br/wp-content/uploads/2019/05/f%C3%ADsica-estudo-dica-enem-800x500.png" alt=""/>
               </div>{/* IMAGE */}
               <div className={styles.descrip}>
-                <p>Física I está sendo ministrado por Paulo Cesar, o professor dos cabelos brancos.</p>
+                <p>Física I está sendo ministrado por Doug, da UFPR. obs: Não é nosso professor, mas é melhor ir por ele, confia!</p>
               </div>{/* DESCRIP */}
               <div className={styles.redirect}>
                 <Link href="/materias/fisica">
@@ -137,26 +137,6 @@ export default function Materias() {
               </div>{/* REDIRECT */}
             </div>{/* CARDBODY */}
           </div>{/* LINGUAGEM A PROGRAMAÇÃO ------------------ */}
-
-
-          <div className={styles.card}>
-            <div className={styles.cardHeader}>
-              <h2>Lógica de Programação</h2>
-            </div>{/* CARDHEADER */}
-            <div className={styles.cardBody}>
-              <div className={styles.image}>
-                <img src="https://static0.makeuseofimages.com/wordpress/wp-content/uploads/2018/03/brain-programming.jpg" alt=""/>
-              </div>{/* IMAGE */}
-              <div className={styles.descrip}>
-                <p>Lógica de Programação está sendo ministrado por Tatiana.</p>
-              </div>{/* DESCRIP */}
-              <div className={styles.redirect}>
-                <Link href="/materias/logica-programacao">
-                  <a>Aulas</a>
-                </Link>
-              </div>{/* REDIRECT */}
-            </div>{/* CARDBODY */}
-          </div>{/* LÓGICA DE PROGRAMAÇÃO ------------------ */}
 
         </div>{/* CARDSWRAPPER */}
       </div>
